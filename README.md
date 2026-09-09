@@ -3,6 +3,8 @@
 Sitio estático + panel de administración (Decap CMS) para que una persona no técnica
 pueda cargar **eventos** y **noticias** sin tocar código.
 
+Repositorio ya creado y con el código subido: https://github.com/cristianandresojeda1984-max/trivento-web
+
 ## Estructura
 
 ```
@@ -26,28 +28,7 @@ corre `scripts/build-content.js`, que arma `data/eventos.json` y `data/noticias.
 `index.html` los lee con `fetch()` y pinta las tarjetas. Por eso cada publicación se refleja
 sola, sin que nadie edite HTML a mano.
 
-## 1. Crear el repositorio en GitHub
-
-No tengo acceso directo a tu cuenta de GitHub desde acá, así que este paso lo hacés vos
-(2 minutos):
-
-1. Entrá a https://github.com/new
-2. Nombre del repositorio: `trivento-web`
-3. Dejalo **público o privado**, como prefieras (ambos funcionan con Netlify) — sin
-   agregar README, .gitignore ni licencia (ya vienen en el ZIP).
-4. Creá el repo, y luego subí este proyecto:
-
-```bash
-cd trivento-web
-git init
-git add .
-git commit -m "Sitio inicial Trivento Gestión Cultural + panel Decap CMS"
-git branch -M main
-git remote add origin https://github.com/<TU_USUARIO>/trivento-web.git
-git push -u origin main
-```
-
-## 2. Conectar el repositorio con Netlify (CI/CD)
+## 1. Conectar el repositorio con Netlify (CI/CD)
 
 1. Entrá a https://app.netlify.com y logueate con tu cuenta.
 2. **Add new site → Import an existing project**.
@@ -57,13 +38,13 @@ git push -u origin main
 5. A partir de acá, **cada commit a `main`** (incluidos los que hace Decap CMS al guardar
    contenido) dispara un deploy automático.
 
-## 3. Activar Netlify Identity
+## 2. Activar Netlify Identity
 
 1. En el panel del sitio: **Site configuration → Identity**.
 2. Hacé clic en **Enable Identity**.
 3. En **Registration preference**, elegí **Invite only** (así solo entra quien vos invites).
 
-## 4. Habilitar Git Gateway
+## 3. Habilitar Git Gateway
 
 1. Dentro de **Identity → Services**, buscá **Git Gateway** y hacé clic en **Enable Git Gateway**.
    Esto le permite a Decap CMS hacer commits al repo en nombre del editor, sin que esa
@@ -76,7 +57,7 @@ git push -u origin main
 > cuenta de GitHub, o un proxy de OAuth como DecapBridge). Te aviso esto para que no te agarre
 > de sorpresa, pero hoy el enfoque que pediste funciona correctamente.
 
-## 5. Invitar a la persona que va a administrar el sitio
+## 4. Invitar a la persona que va a administrar el sitio
 
 1. En **Identity**, pestaña de usuarios, hacé clic en **Invite users**.
 2. Cargá su email y enviá la invitación.
