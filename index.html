@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trivento - Gestión Cultural</title>
+<meta name="description" content="Trivento Gestión Cultural: agenda de eventos, noticias y actividades culturales." />
+<style>
+  :root {
+    --bg: #fbf9f6;
+    --ink: #201a17;
+    --muted: #6b6058;
+    --accent: #b23a2e;
+    --accent-ink: #ffffff;
+    --card-bg: #ffffff;
+    --border: #e8e0d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  a { color: var(--accent); }
+  header.hero {
+    background: linear-gradient(135deg, #7c1f16, #b23a2e);
+    color: #fff;
+    padding: 64px 20px 56px;
+    text-align: center;
+  }
+  header.hero .brand {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 10px;
+  }
+  header.hero h1 {
+    margin: 0 0 12px;
+    font-size: clamp(28px, 5vw, 44px);
+  }
+  header.hero p {
+    max-width: 640px;
+    margin: 0 auto;
+    opacity: 0.92;
+    font-size: 17px;
+  }
+  nav.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+  nav.tabs a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.5);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+  }
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  section { margin-bottom: 56px; }
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+  section .section-sub {
+    color: var(--muted);
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    background: #eee;
+  }
+  .card .card-body { padding: 16px; }
+  .card .card-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+  .empty-state {
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    color: var(--muted);
+  }
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="brand">Trivento</div>
+  <h1>Gestión Cultural</h1>
+  <p>Agenda de eventos, noticias y actividades culturales de la comunidad.</p>
+  <nav class="tabs">
+    <a href="#eventos">Eventos</a>
+    <a href="#noticias">Noticias</a>
+  </nav>
+</header>
+
+<main>
+  <section id="eventos">
+    <h2>Próximos eventos</h2>
+    <div class="section-sub">Cargados y actualizados desde el panel de administración.</div>
+    <div id="eventos-grid" class="grid"></div>
+  </section>
+
+  <section id="noticias">
+    <h2>Noticias</h2>
+    <div class="section-sub">Novedades de Trivento Gestión Cultural.</div>
+    <div id="noticias-grid" class="grid"></div>
+  </section>
+</main>
+
+<footer>
+  Trivento &middot; Gestión Cultural &middot; <a href="/admin/">Acceso administración</a>
+</footer>
+
+<script>
+  function formatFecha(iso) {
+    if (!iso) return "";
+    try {
+      const d = new Date(iso);
+      return d.toLocaleDateString("es-AR", { day: "2-digit", month: "long", year: "numeric" });
+    } catch (e) {
+      return iso;
+    }
+  }
+
+  function renderCards(container, items, emptyText) {
+    if (!items || items.length === 0) {
+      container.innerHTML = '<div class="empty-state">' + emptyText + '</div>';
+      return;
+    }
+    container.innerHTML = items.map(function (item) {
+      var img = item.image
+        ? '<img src="' + item.image + '" alt="' + (item.title || "") + '">'
+        : "";
+      var desc = (item.excerpt || "").slice(0, 160);
+      return (
+        '<article class="card">' +
+        img +
+        '<div class="card-body">' +
+        '<div class="card-date">' + formatFecha(item.date) + '</div>' +
+        '<h3>' + (item.title || "") + '</h3>' +
+        '<p>' + desc + (desc.length === 160 ? "…" : "") + '</p>' +
+        '</div>' +
+        '</article>'
+      );
+    }).join("");
+  }
+
+  function cargar(jsonPath, containerId, emptyText) {
+    fetch(jsonPath, { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (items) {
+        items.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+        renderCards(document.getElementById(containerId), items, emptyText);
+      })
+      .catch(function () {
+        renderCards(document.getElementById(containerId), [], emptyText);
+      });
+  }
+
+  cargar("/data/eventos.json", "eventos-grid", "Todavía no hay eventos cargados.");
+  cargar("/data/noticias.json", "noticias-grid", "Todavía no hay noticias cargadas.");
+</script>
+
+</body>
+</html>
