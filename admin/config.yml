@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Le pide a Decap CMS que use el flujo de Identity/Git Gateway de Netlify
+# (login con email/contraseña, sin que el editor necesite cuenta de GitHub).
+local_backend: false
+
+publish_mode: simple
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "eventos"
+    label: "Eventos"
+    label_singular: "Evento"
+    folder: "content/eventos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
+      - { label: "Descripción", name: "excerpt", widget: "text", required: false, hint: "Resumen corto que se muestra en la tarjeta del evento (opcional)." }
+      - { label: "Cuerpo / Descripción completa", name: "body", widget: "markdown" }
+
+  - name: "noticias"
+    label: "Noticias"
+    label_singular: "Noticia"
+    folder: "content/noticias"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
+      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
+      - { label: "Descripción", name: "excerpt", widget: "text", required: false, hint: "Resumen corto que se muestra en la tarjeta de la noticia (opcional)." }
+      - { label: "Cuerpo", name: "body", widget: "markdown" }
