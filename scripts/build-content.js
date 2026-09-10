@@ -82,14 +82,52 @@ function readCollection(folder) {
     });
 }
 
+function readProyectos() {
+  const dir = path.join(ROOT, "content", "proyectos");
+  if (!fs.existsSync(dir)) return [];
+
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md"))
+    .map((file) => {
+      const raw = fs.readFileSync(path.join(dir, file), "utf8");
+      const { data, body } = parseFrontmatter(raw);
+      return {
+        title: data.title || "",
+        categoria: data.categoria || "",
+        ubicacion: data.ubicacion || "",
+        anio: data.anio || "",
+        image: data.image || "",
+        excerpt: data.excerpt || body.replace(/[#*_>`]/g, "").slice(0, 160),
+        slug: file.replace(/\.md$/, ""),
+      };
+    });
+}
+
+function readConfig() {
+  const file = path.join(ROOT, "content", "config.json");
+  if (!fs.existsSync(file)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch (e) {
+    console.warn("⚠ No se pudo leer content/config.json:", e.message);
+    return {};
+  }
+}
+
 function writeJson(name, items) {
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, name), JSON.stringify(items, null, 2));
-  console.log(`✓ data/${name} (${items.length} elemento${items.length === 1 ? "" : "s"})`);
+  const count = Array.isArray(items) ? items.length : Object.keys(items).length;
+  console.log(`✓ data/${name} (${count} elemento${count === 1 ? "" : "s"})`);
 }
 
 const eventos = readCollection("eventos");
 const noticias = readCollection("noticias");
+const proyectos = readProyectos();
+const config = readConfig();
 
 writeJson("eventos.json", eventos);
 writeJson("noticias.json", noticias);
+writeJson("proyectos.json", proyectos);
+writeJson("config.json", config);
