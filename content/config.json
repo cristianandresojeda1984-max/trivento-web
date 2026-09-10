@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "ubicacion": "Rosario, Argentina",
+    "titulo": "Trivento",
+    "subtitulo": "Gestionamos Cultura",
+    "descripcion": "Entendemos la cultura como un espacio de producción de sentidos, atravesados por la política, el arte y la sociedad. Un hacer compartido, humano, sensible y honesto."
+  },
+  "manifiesto": {
+    "eyebrow": "Nuestra Esencia",
+    "titulo": "Declaración de Intenciones",
+    "parrafo1": "Desde Trivento creemos que la cultura y su gestión son un ejercicio esencial con influencia constante en nuestras vidas.",
+    "parrafo2": "Conscientes de la novedad que representa la profesionalización de la disciplina, así como de la incertidumbre que genera este trabajo, la apertura, la transparencia y la claridad en nuestras prácticas son valores innegociables.",
+    "cita": "Buscamos impregnar en cada propuesta un claro simbolismo identitario para que quienes participen conozcan y perciban el impacto de un equipo en movimiento."
+  },
+  "pilares": {
+    "eyebrow": "El Soplo / Tres Voces",
+    "titulo": "Un Viento de Tres Direcciones",
+    "descripcion": "Nuestro nombre simboliza la unión de tres fuerzas en colaboración constante para transformar ideas en proyectos culturales tangibles.",
+    "items": [
+      {
+        "numero": "01",
+        "titulo": "Arte & Sensibilidad",
+        "descripcion": "Entendemos el arte como la fuerza poética que despierta sentidos y conecta las emociones más profundas de la comunidad. Curaduría cuidadosa y proyectos singulares.",
+        "etiqueta": "Dimensión Estética"
+      },
+      {
+        "numero": "02",
+        "titulo": "Política & Sentido",
+        "descripcion": "La gestión cultural como posicionamiento frente al territorio. Construimos sentido colectivo, promoviendo la democratización y profesionalización del sector.",
+        "etiqueta": "Compromiso Social"
+      },
+      {
+        "numero": "03",
+        "titulo": "Sociedad & Red",
+        "descripcion": "El hacer humano y compartido. Articulamos diálogos entre artistas, instituciones, espacios independientes y audiencias para fortalecer la trama cultural.",
+        "etiqueta": "Hacer Colectivo"
+      }
+    ]
+  },
+  "servicios": {
+    "eyebrow": "Qué Hacemos",
+    "titulo": "Líneas de Acción",
+    "descripcion": "Acompañamos iniciativas desde su concepción teórica hasta la ejecución técnica, cuidando cada detalle del proceso.",
+    "items": [
+      {
+        "titulo": "Producción Integral",
+        "descripcion": "Coordinación logística, técnica y humana para festivales, espectáculos artísticos, muestras de arte y eventos culturales singulares en Rosario y la zona.",
+        "bullets": ["Logística y montaje técnico", "Gestión de agendas y espacios", "Coordinación de equipos"]
+      },
+      {
+        "titulo": "Curaduría & Diseño",
+        "descripcion": "Desarrollo de proyectos con alta carga simbólica e identitaria. Elaboración de discursos curatoriales, exhibiciones e intervenciones urbanas.",
+        "bullets": ["Concepto y fundamentación", "Selección y guión museográfico", "Narrativas comunicacionales"]
+      },
+      {
+        "titulo": "Consultoría Estratégica",
+        "descripcion": "Acompañamiento a organizaciones, colectivos artísticos e instituciones en la profesionalización de la gestión y búsqueda de recursos.",
+        "bullets": ["Aplicación a becas y subsidios", "Planificación y presupuesto", "Diagnóstico de públicos"]
+      }
+    ]
+  },
+  "proyectos_seccion": {
+    "eyebrow": "Bitácora",
+    "titulo": "Proyectos & Experiencias"
+  },
+  "agenda_seccion": {
+    "eyebrow": "Agenda",
+    "titulo": "Próximos Eventos",
+    "descripcion": "Se cargan y actualizan directamente desde el panel de administración en /admin."
+  },
+  "noticias_seccion": {
+    "eyebrow": "Novedades",
+    "titulo": "Noticias",
+    "descripcion": "Novedades de Trivento Gestión Cultural, publicadas desde el panel de administración."
+  },
+  "contacto": {
+    "eyebrow": "Sigamos Conversando",
+    "titulo": "Hagamos red",
+    "descripcion": "Si tenés una idea, un proyecto en desarrollo o buscas articular iniciativas culturales con nuestro equipo, dejanos tu mensaje.",
+    "ubicacion": "Rosario, Santa Fe, Argentina",
+    "instagram_handle": "@culturatrivento",
+    "instagram_url": "https://instagram.com/culturatrivento",
+    "email": "contacto@culturatrivento.com.ar",
+    "telefono": ""
+  },
+  "footer": {
+    "copyright": "© 2026 Trivento. Tres fuerzas, un viento de cambio cultural. Rosario, Argentina."
+  }
+}
