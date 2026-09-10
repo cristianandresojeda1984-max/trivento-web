@@ -12,6 +12,121 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - name: "config"
+    label: "Configuración del sitio"
+    files:
+      - name: "general"
+        label: "Contenido general"
+        file: "content/config.json"
+        description: "Todos los textos y datos de contacto de la página principal (fuera de Eventos, Noticias y Proyectos)."
+        fields:
+          - label: "Portada (Hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Ubicación (badge)", name: "ubicacion", widget: "string" }
+              - { label: "Título principal", name: "titulo", widget: "string" }
+              - { label: "Subtítulo", name: "subtitulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+
+          - label: "Manifiesto"
+            name: "manifiesto"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Párrafo 1", name: "parrafo1", widget: "text" }
+              - { label: "Párrafo 2", name: "parrafo2", widget: "text" }
+              - { label: "Cita destacada", name: "cita", widget: "text" }
+
+          - label: "Pilares (Tres Direcciones)"
+            name: "pilares"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - label: "Los tres pilares"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Número", name: "numero", widget: "string" }
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Descripción", name: "descripcion", widget: "text" }
+                  - { label: "Etiqueta", name: "etiqueta", widget: "string" }
+
+          - label: "Servicios (Líneas de Acción)"
+            name: "servicios"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - label: "Servicios"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Descripción", name: "descripcion", widget: "text" }
+                  - { label: "Puntos (uno por línea)", name: "bullets", widget: "list", field: { label: "Punto", name: "punto", widget: "string" } }
+
+          - label: "Encabezado de Proyectos"
+            name: "proyectos_seccion"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+
+          - label: "Encabezado de Agenda / Eventos"
+            name: "agenda_seccion"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+
+          - label: "Encabezado de Noticias"
+            name: "noticias_seccion"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+
+          - label: "Contacto"
+            name: "contacto"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
+              - { label: "Ubicación", name: "ubicacion", widget: "string" }
+              - { label: "Instagram (@usuario)", name: "instagram_handle", widget: "string" }
+              - { label: "Instagram (link)", name: "instagram_url", widget: "string" }
+              - { label: "Email de contacto", name: "email", widget: "string" }
+              - { label: "Teléfono", name: "telefono", widget: "string", required: false, hint: "Incluí código de área. Ej: +54 9 341 000-0000" }
+
+          - label: "Pie de página"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Texto de copyright", name: "copyright", widget: "string" }
+
+  - name: "proyectos"
+    label: "Proyectos"
+    label_singular: "Proyecto"
+    folder: "content/proyectos"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{ubicacion}} {{anio}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Categoría (ej: Producción, Curaduría, Encuentro)", name: "categoria", widget: "string" }
+      - { label: "Ubicación", name: "ubicacion", widget: "string" }
+      - { label: "Año", name: "anio", widget: "string" }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Descripción", name: "excerpt", widget: "text" }
+
   - name: "eventos"
     label: "Eventos"
     label_singular: "Evento"
