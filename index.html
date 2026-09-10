@@ -48,7 +48,8 @@
   .card-img-fallback {
     background: linear-gradient(135deg, #00583c, #007a53);
   }
-  [x-cloak] { display: none !important; }
+  [data-skeleton] { color: transparent !important; }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
@@ -75,7 +76,7 @@
     </nav>
 
     <div class="hidden lg:flex items-center gap-5">
-      <a href="https://instagram.com/culturatrivento" target="_blank" rel="noopener" class="text-trivento-600 hover:text-trivento-700 text-lg" aria-label="Instagram">
+      <a id="header-instagram" href="https://instagram.com/culturatrivento" target="_blank" rel="noopener" class="text-trivento-600 hover:text-trivento-700 text-lg" aria-label="Instagram">
         <i class="fa-brands fa-instagram"></i>
       </a>
       <a href="#contacto" class="inline-flex items-center gap-2 bg-trivento-600 hover:bg-trivento-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">
@@ -105,13 +106,13 @@
   <div class="relative max-w-4xl mx-auto px-5 sm:px-8 py-28 sm:py-36 text-center">
     <span class="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
       <span class="w-1.5 h-1.5 rounded-full bg-trivento-300"></span>
-      Rosario, Argentina
+      <span id="hero-ubicacion">Rosario, Argentina</span>
     </span>
-    <h1 class="font-serif font-bold text-6xl sm:text-8xl mb-6">Trivento</h1>
-    <p class="text-lg sm:text-2xl font-light tracking-[0.2em] uppercase text-green-100 border-y border-white/20 py-3 max-w-xl mx-auto mb-8">
+    <h1 id="hero-titulo" class="font-serif font-bold text-6xl sm:text-8xl mb-6">Trivento</h1>
+    <p id="hero-subtitulo" class="text-lg sm:text-2xl font-light tracking-[0.2em] uppercase text-green-100 border-y border-white/20 py-3 max-w-xl mx-auto mb-8">
       Gestionamos Cultura
     </p>
-    <p class="max-w-2xl text-base sm:text-lg text-green-50/90 font-light leading-relaxed mx-auto mb-10">
+    <p id="hero-descripcion" class="max-w-2xl text-base sm:text-lg text-green-50/90 font-light leading-relaxed mx-auto mb-10">
       Entendemos la cultura como un espacio de producción de sentidos, atravesados por la política,
       el arte y la sociedad. Un hacer compartido, humano, sensible y honesto.
     </p>
@@ -129,22 +130,11 @@
 <!-- Manifiesto -->
 <section id="manifiesto" class="bg-white py-24 px-5 sm:px-8">
   <div class="max-w-3xl mx-auto text-center">
-    <p class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Nuestra Esencia</p>
-    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-gray-900 mb-8">Declaración de Intenciones</h2>
-    <p class="text-lg text-gray-600 leading-relaxed mb-6">
-      <span class="text-trivento-700 font-semibold">Desde Trivento creemos</span> que la cultura y su gestión
-      son un ejercicio esencial con influencia constante en nuestras vidas.
-    </p>
-    <p class="text-lg text-gray-600 leading-relaxed mb-6">
-      Conscientes de la novedad que representa la profesionalización de la disciplina, así como de la
-      incertidumbre que genera este trabajo,
-      <span class="font-semibold text-gray-900">la apertura, la transparencia y la claridad en nuestras
-      prácticas son valores innegociables.</span>
-    </p>
-    <p class="italic font-serif text-xl text-gray-700 mb-8">
-      "Buscamos impregnar en cada propuesta un claro simbolismo identitario para que quienes participen
-      conozcan y perciban el impacto de un equipo en movimiento."
-    </p>
+    <p id="manifiesto-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Nuestra Esencia</p>
+    <h2 id="manifiesto-titulo" class="font-serif font-bold text-3xl sm:text-4xl text-gray-900 mb-8">Declaración de Intenciones</h2>
+    <p id="manifiesto-parrafo1" class="text-lg text-gray-600 leading-relaxed mb-6"></p>
+    <p id="manifiesto-parrafo2" class="text-lg text-gray-600 leading-relaxed mb-6"></p>
+    <p id="manifiesto-cita" class="italic font-serif text-xl text-gray-700 mb-8"></p>
     <a href="#pilares" class="inline-flex items-center gap-2 text-trivento-600 font-semibold hover:text-trivento-700">
       Leer manifiesto completo <i class="fa-solid fa-arrow-right"></i>
     </a>
@@ -154,92 +144,21 @@
 <!-- Pilares -->
 <section id="pilares" class="bg-trivento-900 text-white py-24 px-5 sm:px-8">
   <div class="max-w-6xl mx-auto text-center mb-16">
-    <p class="text-trivento-300 text-xs font-semibold tracking-[0.2em] uppercase mb-3">El Soplo / Tres Voces</p>
-    <h2 class="font-serif font-bold text-4xl sm:text-5xl mb-6">Un Viento de Tres Direcciones</h2>
-    <p class="max-w-2xl mx-auto text-green-100/80 font-light">
-      Nuestro nombre simboliza la unión de tres fuerzas en colaboración constante para transformar ideas
-      en proyectos culturales tangibles.
-    </p>
+    <p id="pilares-eyebrow" class="text-trivento-300 text-xs font-semibold tracking-[0.2em] uppercase mb-3">El Soplo / Tres Voces</p>
+    <h2 id="pilares-titulo" class="font-serif font-bold text-4xl sm:text-5xl mb-6">Un Viento de Tres Direcciones</h2>
+    <p id="pilares-descripcion" class="max-w-2xl mx-auto text-green-100/80 font-light"></p>
   </div>
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-    <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
-      <span class="font-serif text-4xl text-trivento-300 font-bold">01</span>
-      <h3 class="font-serif font-bold text-2xl mt-4 mb-3">Arte &amp; Sensibilidad</h3>
-      <p class="text-green-100/80 font-light leading-relaxed mb-6">
-        Entendemos el arte como la fuerza poética que despierta sentidos y conecta las emociones más
-        profundas de la comunidad. Curaduría cuidadosa y proyectos singulares.
-      </p>
-      <p class="text-xs tracking-[0.2em] uppercase text-trivento-300">Dimensión Estética</p>
-    </div>
-    <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
-      <span class="font-serif text-4xl text-trivento-300 font-bold">02</span>
-      <h3 class="font-serif font-bold text-2xl mt-4 mb-3">Política &amp; Sentido</h3>
-      <p class="text-green-100/80 font-light leading-relaxed mb-6">
-        La gestión cultural como posicionamiento frente al territorio. Construimos sentido colectivo,
-        promoviendo la democratización y profesionalización del sector.
-      </p>
-      <p class="text-xs tracking-[0.2em] uppercase text-trivento-300">Compromiso Social</p>
-    </div>
-    <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
-      <span class="font-serif text-4xl text-trivento-300 font-bold">03</span>
-      <h3 class="font-serif font-bold text-2xl mt-4 mb-3">Sociedad &amp; Red</h3>
-      <p class="text-green-100/80 font-light leading-relaxed mb-6">
-        El hacer humano y compartido. Articulamos diálogos entre artistas, instituciones, espacios
-        independientes y audiencias para fortalecer la trama cultural.
-      </p>
-      <p class="text-xs tracking-[0.2em] uppercase text-trivento-300">Hacer Colectivo</p>
-    </div>
-  </div>
+  <div id="pilares-grid" class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8"></div>
 </section>
 
 <!-- Servicios -->
 <section id="servicios" class="bg-trivento-50 py-24 px-5 sm:px-8">
   <div class="max-w-6xl mx-auto text-center mb-16">
-    <p class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Qué Hacemos</p>
-    <h2 class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-6">Líneas de Acción</h2>
-    <p class="max-w-2xl mx-auto text-gray-600 font-light">
-      Acompañamos iniciativas desde su concepción teórica hasta la ejecución técnica, cuidando cada
-      detalle del proceso.
-    </p>
+    <p id="servicios-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Qué Hacemos</p>
+    <h2 id="servicios-titulo" class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-6">Líneas de Acción</h2>
+    <p id="servicios-descripcion" class="max-w-2xl mx-auto text-gray-600 font-light"></p>
   </div>
-  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-    <div class="bg-trivento-700 text-white rounded-2xl p-8">
-      <h3 class="font-serif font-bold text-2xl mb-3">Producción Integral</h3>
-      <p class="text-green-50/80 font-light leading-relaxed mb-6">
-        Coordinación logística, técnica y humana para festivales, espectáculos artísticos, muestras de
-        arte y eventos culturales singulares en Rosario y la zona.
-      </p>
-      <ul class="space-y-2 text-sm">
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Logística y montaje técnico</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Gestión de agendas y espacios</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Coordinación de equipos</li>
-      </ul>
-    </div>
-    <div class="bg-trivento-700 text-white rounded-2xl p-8">
-      <h3 class="font-serif font-bold text-2xl mb-3">Curaduría &amp; Diseño</h3>
-      <p class="text-green-50/80 font-light leading-relaxed mb-6">
-        Desarrollo de proyectos con alta carga simbólica e identitaria. Elaboración de discursos
-        curatoriales, exhibiciones e intervenciones urbanas.
-      </p>
-      <ul class="space-y-2 text-sm">
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Concepto y fundamentación</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Selección y guión museográfico</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Narrativas comunicacionales</li>
-      </ul>
-    </div>
-    <div class="bg-trivento-700 text-white rounded-2xl p-8">
-      <h3 class="font-serif font-bold text-2xl mb-3">Consultoría Estratégica</h3>
-      <p class="text-green-50/80 font-light leading-relaxed mb-6">
-        Acompañamiento a organizaciones, colectivos artísticos e instituciones en la profesionalización
-        de la gestión y búsqueda de recursos.
-      </p>
-      <ul class="space-y-2 text-sm">
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Aplicación a becas y subsidios</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Planificación y presupuesto</li>
-        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> Diagnóstico de públicos</li>
-      </ul>
-    </div>
-  </div>
+  <div id="servicios-grid" class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8"></div>
 </section>
 
 <!-- Proyectos -->
@@ -247,45 +166,11 @@
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
       <div>
-        <p class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Bitácora</p>
-        <h2 class="font-serif font-bold text-4xl sm:text-5xl text-gray-900">Proyectos &amp; Experiencias</h2>
+        <p id="proyectos-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Bitácora</p>
+        <h2 id="proyectos-titulo" class="font-serif font-bold text-4xl sm:text-5xl text-gray-900">Proyectos &amp; Experiencias</h2>
       </div>
     </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <article class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-        <div class="relative">
-          <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Resonancias: Música y Territorio" class="w-full h-56 object-cover">
-          <span class="absolute top-4 left-4 bg-white text-trivento-700 text-[11px] font-semibold tracking-wide uppercase px-3 py-1 rounded-full">Producción Exec.</span>
-        </div>
-        <div class="p-6">
-          <p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">Rosario • 2025</p>
-          <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Resonancias: Música &amp; Territorio</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Ciclo acústico itinerante por espacios patrimoniales de Rosario, revalorizando la arquitectura local a través del sonido independiente.</p>
-        </div>
-      </article>
-      <article class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-        <div class="relative">
-          <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Umbrales: Muestra Visual" class="w-full h-56 object-cover">
-          <span class="absolute top-4 left-4 bg-white text-trivento-700 text-[11px] font-semibold tracking-wide uppercase px-3 py-1 rounded-full">Curaduría</span>
-        </div>
-        <div class="p-6">
-          <p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">Santa Fe • 2025</p>
-          <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Umbrales: Muestra Visual</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Exposición colectiva que reunió obras de 12 artistas emergentes explorando la identidad ribereña y las memorias del agua.</p>
-        </div>
-      </article>
-      <article class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-        <div class="relative">
-          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Foro de Gestión y Políticas" class="w-full h-56 object-cover">
-          <span class="absolute top-4 left-4 bg-white text-trivento-700 text-[11px] font-semibold tracking-wide uppercase px-3 py-1 rounded-full">Encuentro</span>
-        </div>
-        <div class="p-6">
-          <p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">Rosario • 2026</p>
-          <h3 class="font-serif font-bold text-xl text-gray-900 mb-2">Foro de Gestión &amp; Políticas</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">Jornada de debate y formación colaborativa sobre profesionalización de industrias creativas y financiamiento independiente.</p>
-        </div>
-      </article>
-    </div>
+    <div id="proyectos-grid" class="grid md:grid-cols-3 gap-8"></div>
   </div>
 </section>
 
@@ -293,12 +178,10 @@
 <section id="agenda" class="bg-trivento-50 py-24 px-5 sm:px-8">
   <div class="max-w-6xl mx-auto">
     <div class="mb-12">
-      <p class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Agenda</p>
-      <h2 class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-4">Próximos Eventos</h2>
-      <p class="text-gray-600 font-light max-w-2xl">
-        Se cargan y actualizan directamente desde el panel de administración en
-        <a href="/admin/" class="text-trivento-600 font-medium">/admin</a>.
-      </p>
+      <p id="agenda-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Agenda</p>
+      <h2 id="agenda-titulo" class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-4">Próximos Eventos</h2>
+      <p id="agenda-descripcion" class="text-gray-600 font-light max-w-2xl"></p>
+      <p class="text-gray-500 text-sm font-light max-w-2xl mt-1">Se administran desde <a href="/admin/" class="text-trivento-600 font-medium">/admin</a>.</p>
     </div>
     <div id="eventos-grid" class="grid md:grid-cols-3 gap-8"></div>
   </div>
@@ -308,11 +191,9 @@
 <section id="noticias" class="bg-white py-24 px-5 sm:px-8">
   <div class="max-w-6xl mx-auto">
     <div class="mb-12">
-      <p class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Novedades</p>
-      <h2 class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-4">Noticias</h2>
-      <p class="text-gray-600 font-light max-w-2xl">
-        Novedades de Trivento Gestión Cultural, publicadas desde el panel de administración.
-      </p>
+      <p id="noticias-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Novedades</p>
+      <h2 id="noticias-titulo" class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-4">Noticias</h2>
+      <p id="noticias-descripcion" class="text-gray-600 font-light max-w-2xl"></p>
     </div>
     <div id="noticias-grid" class="grid md:grid-cols-3 gap-8"></div>
   </div>
@@ -322,32 +203,36 @@
 <section id="contacto" class="bg-trivento-50 py-24 px-5 sm:px-8">
   <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
     <div>
-      <p class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Sigamos Conversando</p>
-      <h2 class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-5">Hagamos red</h2>
-      <p class="text-gray-600 font-light leading-relaxed mb-10 max-w-md">
-        Si tenés una idea, un proyecto en desarrollo o buscas articular iniciativas culturales con
-        nuestro equipo, dejanos tu mensaje.
-      </p>
+      <p id="contacto-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Sigamos Conversando</p>
+      <h2 id="contacto-titulo" class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-5">Hagamos red</h2>
+      <p id="contacto-descripcion" class="text-gray-600 font-light leading-relaxed mb-10 max-w-md"></p>
       <div class="space-y-6">
         <div class="flex items-start gap-4">
           <span class="w-10 h-10 rounded-full bg-trivento-100 text-trivento-600 flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></span>
           <div>
             <p class="font-semibold text-gray-900">Ubicación</p>
-            <p class="text-gray-600 text-sm">Rosario, Santa Fe, Argentina</p>
+            <p id="contacto-ubicacion" class="text-gray-600 text-sm"></p>
+          </div>
+        </div>
+        <div id="contacto-telefono-wrap" class="flex items-start gap-4" hidden>
+          <span class="w-10 h-10 rounded-full bg-trivento-100 text-trivento-600 flex items-center justify-center"><i class="fa-solid fa-phone"></i></span>
+          <div>
+            <p class="font-semibold text-gray-900">Teléfono</p>
+            <a id="contacto-telefono" href="#" class="text-gray-600 text-sm hover:text-trivento-600"></a>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <span class="w-10 h-10 rounded-full bg-trivento-100 text-trivento-600 flex items-center justify-center"><i class="fa-brands fa-instagram"></i></span>
           <div>
             <p class="font-semibold text-gray-900">Instagram</p>
-            <a href="https://instagram.com/culturatrivento" target="_blank" rel="noopener" class="text-gray-600 text-sm hover:text-trivento-600">@culturatrivento</a>
+            <a id="contacto-instagram" href="#" target="_blank" rel="noopener" class="text-gray-600 text-sm hover:text-trivento-600"></a>
           </div>
         </div>
         <div class="flex items-start gap-4">
           <span class="w-10 h-10 rounded-full bg-trivento-100 text-trivento-600 flex items-center justify-center"><i class="fa-solid fa-envelope"></i></span>
           <div>
             <p class="font-semibold text-gray-900">Correo Electrónico</p>
-            <a href="mailto:contacto@culturatrivento.com.ar" class="text-gray-600 text-sm hover:text-trivento-600">contacto@culturatrivento.com.ar</a>
+            <a id="contacto-email" href="#" class="text-gray-600 text-sm hover:text-trivento-600"></a>
           </div>
         </div>
       </div>
@@ -385,7 +270,7 @@
       <span class="font-serif text-white">Trivento - Gestión Cultural</span>
     </div>
     <p class="text-center sm:text-right">
-      © 2026 Trivento. Tres fuerzas, un viento de cambio cultural. Rosario, Argentina.
+      <span id="footer-copyright">© 2026 Trivento. Tres fuerzas, un viento de cambio cultural. Rosario, Argentina.</span>
       &nbsp;·&nbsp;<a href="/admin/" class="hover:text-white">Acceso administración</a>
     </p>
   </div>
@@ -402,7 +287,11 @@
     });
   });
 
-  // Contenido dinámico: Eventos y Noticias cargados desde el CMS (Decap)
+  function setText(id, value) {
+    var el = document.getElementById(id);
+    if (el && value !== undefined && value !== null && value !== "") el.textContent = value;
+  }
+
   function formatFecha(iso) {
     if (!iso) return "";
     try {
@@ -413,6 +302,162 @@
     }
   }
 
+  function emptyStateHtml(text) {
+    return (
+      '<div class="md:col-span-3 border border-dashed border-trivento-200 rounded-2xl p-10 text-center text-gray-500">' +
+      text +
+      "</div>"
+    );
+  }
+
+  // ---- Configuración general (hero, manifiesto, pilares, servicios, contacto, footer) ----
+  function aplicarConfig(cfg) {
+    if (!cfg || typeof cfg !== "object") return;
+
+    if (cfg.hero) {
+      setText("hero-ubicacion", cfg.hero.ubicacion);
+      setText("hero-titulo", cfg.hero.titulo);
+      setText("hero-subtitulo", cfg.hero.subtitulo);
+      setText("hero-descripcion", cfg.hero.descripcion);
+    }
+
+    if (cfg.manifiesto) {
+      setText("manifiesto-eyebrow", cfg.manifiesto.eyebrow);
+      setText("manifiesto-titulo", cfg.manifiesto.titulo);
+      setText("manifiesto-parrafo1", cfg.manifiesto.parrafo1);
+      setText("manifiesto-parrafo2", cfg.manifiesto.parrafo2);
+      if (cfg.manifiesto.cita) setText("manifiesto-cita", '"' + cfg.manifiesto.cita + '"');
+    }
+
+    if (cfg.pilares) {
+      setText("pilares-eyebrow", cfg.pilares.eyebrow);
+      setText("pilares-titulo", cfg.pilares.titulo);
+      setText("pilares-descripcion", cfg.pilares.descripcion);
+      var pilaresGrid = document.getElementById("pilares-grid");
+      if (pilaresGrid && Array.isArray(cfg.pilares.items)) {
+        pilaresGrid.innerHTML = cfg.pilares.items.map(function (item) {
+          return (
+            '<div class="bg-white/5 border border-white/10 rounded-2xl p-8">' +
+            '<span class="font-serif text-4xl text-trivento-300 font-bold">' + (item.numero || "") + "</span>" +
+            '<h3 class="font-serif font-bold text-2xl mt-4 mb-3">' + (item.titulo || "") + "</h3>" +
+            '<p class="text-green-100/80 font-light leading-relaxed mb-6">' + (item.descripcion || "") + "</p>" +
+            '<p class="text-xs tracking-[0.2em] uppercase text-trivento-300">' + (item.etiqueta || "") + "</p>" +
+            "</div>"
+          );
+        }).join("");
+      }
+    }
+
+    if (cfg.servicios) {
+      setText("servicios-eyebrow", cfg.servicios.eyebrow);
+      setText("servicios-titulo", cfg.servicios.titulo);
+      setText("servicios-descripcion", cfg.servicios.descripcion);
+      var serviciosGrid = document.getElementById("servicios-grid");
+      if (serviciosGrid && Array.isArray(cfg.servicios.items)) {
+        serviciosGrid.innerHTML = cfg.servicios.items.map(function (item) {
+          var bullets = Array.isArray(item.bullets) ? item.bullets : [];
+          var bulletsHtml = bullets.map(function (b) {
+            var texto = typeof b === "string" ? b : (b && (b.punto || b.value)) || "";
+            return '<li class="flex items-center gap-2"><i class="fa-solid fa-check text-trivento-300"></i> ' + texto + "</li>";
+          }).join("");
+          return (
+            '<div class="bg-trivento-700 text-white rounded-2xl p-8">' +
+            '<h3 class="font-serif font-bold text-2xl mb-3">' + (item.titulo || "") + "</h3>" +
+            '<p class="text-green-50/80 font-light leading-relaxed mb-6">' + (item.descripcion || "") + "</p>" +
+            '<ul class="space-y-2 text-sm">' + bulletsHtml + "</ul>" +
+            "</div>"
+          );
+        }).join("");
+      }
+    }
+
+    if (cfg.proyectos_seccion) {
+      setText("proyectos-eyebrow", cfg.proyectos_seccion.eyebrow);
+      setText("proyectos-titulo", cfg.proyectos_seccion.titulo);
+    }
+
+    if (cfg.agenda_seccion) {
+      setText("agenda-eyebrow", cfg.agenda_seccion.eyebrow);
+      setText("agenda-titulo", cfg.agenda_seccion.titulo);
+      setText("agenda-descripcion", cfg.agenda_seccion.descripcion);
+    }
+
+    if (cfg.noticias_seccion) {
+      setText("noticias-eyebrow", cfg.noticias_seccion.eyebrow);
+      setText("noticias-titulo", cfg.noticias_seccion.titulo);
+      setText("noticias-descripcion", cfg.noticias_seccion.descripcion);
+    }
+
+    if (cfg.contacto) {
+      setText("contacto-eyebrow", cfg.contacto.eyebrow);
+      setText("contacto-titulo", cfg.contacto.titulo);
+      setText("contacto-descripcion", cfg.contacto.descripcion);
+      setText("contacto-ubicacion", cfg.contacto.ubicacion);
+
+      var telWrap = document.getElementById("contacto-telefono-wrap");
+      var telEl = document.getElementById("contacto-telefono");
+      if (cfg.contacto.telefono) {
+        telEl.textContent = cfg.contacto.telefono;
+        telEl.href = "tel:" + cfg.contacto.telefono.replace(/[^+\d]/g, "");
+        telWrap.hidden = false;
+      }
+
+      var igEl = document.getElementById("contacto-instagram");
+      if (cfg.contacto.instagram_handle) igEl.textContent = cfg.contacto.instagram_handle;
+      if (cfg.contacto.instagram_url) {
+        igEl.href = cfg.contacto.instagram_url;
+        document.getElementById("header-instagram").href = cfg.contacto.instagram_url;
+      }
+
+      var emailEl = document.getElementById("contacto-email");
+      if (cfg.contacto.email) {
+        emailEl.textContent = cfg.contacto.email;
+        emailEl.href = "mailto:" + cfg.contacto.email;
+      }
+    }
+
+    if (cfg.footer) {
+      setText("footer-copyright", cfg.footer.copyright);
+    }
+  }
+
+  fetch("/data/config.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .then(aplicarConfig)
+    .catch(function () {});
+
+  // ---- Proyectos (tarjetas con imagen, categoría, ubicación y año) ----
+  function proyectoCardHtml(item) {
+    var imgHtml = item.image
+      ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-56 object-cover">'
+      : '<div class="w-full h-56 card-img-fallback flex items-center justify-center text-white/70 text-3xl"><i class="fa-solid fa-images"></i></div>';
+    var meta = [item.ubicacion, item.anio].filter(Boolean).join(" • ");
+    return (
+      '<article class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">' +
+      '<div class="relative">' +
+      imgHtml +
+      (item.categoria ? '<span class="absolute top-4 left-4 bg-white text-trivento-700 text-[11px] font-semibold tracking-wide uppercase px-3 py-1 rounded-full">' + item.categoria + "</span>" : "") +
+      "</div>" +
+      '<div class="p-6">' +
+      (meta ? '<p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">' + meta + "</p>" : "") +
+      '<h3 class="font-serif font-bold text-xl text-gray-900 mb-2">' + (item.title || "") + "</h3>" +
+      '<p class="text-gray-600 text-sm leading-relaxed">' + (item.excerpt || "") + "</p>" +
+      "</div>" +
+      "</article>"
+    );
+  }
+
+  fetch("/data/proyectos.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (items) {
+      var el = document.getElementById("proyectos-grid");
+      el.innerHTML = items.length
+        ? items.map(proyectoCardHtml).join("")
+        : emptyStateHtml("Todavía no hay proyectos cargados. Se van a mostrar acá apenas se publiquen desde /admin.");
+    })
+    .catch(function () {});
+
+  // ---- Eventos y Noticias (cargados desde el CMS) ----
   function cardHtml(item, iconClass) {
     var imgHtml = item.image
       ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-48 object-cover">'
@@ -427,14 +472,6 @@
       '<p class="text-gray-600 text-sm leading-relaxed">' + desc + (desc.length === 150 ? "…" : "") + "</p>" +
       "</div>" +
       "</article>"
-    );
-  }
-
-  function emptyStateHtml(text) {
-    return (
-      '<div class="md:col-span-3 border border-dashed border-trivento-200 rounded-2xl p-10 text-center text-gray-500">' +
-      text +
-      "</div>"
     );
   }
 
