@@ -1,12 +1,12 @@
 {
   "agenda_seccion": {
     "eyebrow": "Agenda",
-    "titulo": "PRÓXIMOS EVENTOS",
+    "titulo": "Próximos eventos",
     "descripcion": "Todos nuestros eventos, para que no te pierdas nada."
   },
   "proyectos_seccion": {
     "eyebrow": "Bitácora",
-    "titulo": "PROYECTOS Y EXPERIENCIAS"
+    "titulo": "Proyectos y Experiencias"
   },
   "noticias_seccion": {
     "eyebrow": "El mundo cultural el movimiento",
@@ -25,7 +25,7 @@
   },
   "pilares": {
     "eyebrow": "Nuestra esencia",
-    "titulo": "BASTIONES",
+    "titulo": "Pilares",
     "descripcion": "Nuestros bastiones: la sensibilidad, la creatividad, la humanidad y la organización.",
     "items": []
   },
@@ -33,7 +33,7 @@
     "ubicacion": "Rosario, Argentina",
     "titulo": "Trivento",
     "subtitulo": "Gestionamos Cultura",
-    "descripcion": "Somos un Equipo de Gestión y Producción Cultural que entiende la cultura como un espacio de producción de sentidos, atravesados por la política, el arte y la sociedad. Un hacer compartido, humano, sensible y honesto."
+    "descripcion": "Somos un Equipo de Gestión y Producción Cultural que entiende la cultura como un espacio de producción de sentidos, atravesados por la política, el arte y la sociedad."
   },
   "footer": {
     "copyright": "© 2026 Trivento. Gestionamos Cultura. Rosario, Argentina."
@@ -47,7 +47,7 @@
   },
   "servicios": {
     "eyebrow": "Lo que hacemos",
-    "titulo": "LÍNEAS DE TRABAJO",
+    "titulo": "Líneas de Trabajo",
     "descripcion": "",
     "items": [
       {
