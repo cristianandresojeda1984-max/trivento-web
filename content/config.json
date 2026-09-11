@@ -1,77 +1,17 @@
 {
-  "hero": {
-    "ubicacion": "Rosario, Argentina",
-    "titulo": "Trivento",
-    "subtitulo": "Gestionamos Cultura",
-    "descripcion": "Entendemos la cultura como un espacio de producción de sentidos, atravesados por la política, el arte y la sociedad. Un hacer compartido, humano, sensible y honesto."
-  },
-  "manifiesto": {
-    "eyebrow": "Nuestra Esencia",
-    "titulo": "Declaración de Intenciones",
-    "parrafo1": "Desde Trivento creemos que la cultura y su gestión son un ejercicio esencial con influencia constante en nuestras vidas.",
-    "parrafo2": "Conscientes de la novedad que representa la profesionalización de la disciplina, así como de la incertidumbre que genera este trabajo, la apertura, la transparencia y la claridad en nuestras prácticas son valores innegociables.",
-    "cita": "Buscamos impregnar en cada propuesta un claro simbolismo identitario para que quienes participen conozcan y perciban el impacto de un equipo en movimiento."
-  },
-  "pilares": {
-    "eyebrow": "El Soplo / Tres Voces",
-    "titulo": "Un Viento de Tres Direcciones",
-    "descripcion": "Nuestro nombre simboliza la unión de tres fuerzas en colaboración constante para transformar ideas en proyectos culturales tangibles.",
-    "items": [
-      {
-        "numero": "01",
-        "titulo": "Arte & Sensibilidad",
-        "descripcion": "Entendemos el arte como la fuerza poética que despierta sentidos y conecta las emociones más profundas de la comunidad. Curaduría cuidadosa y proyectos singulares.",
-        "etiqueta": "Dimensión Estética"
-      },
-      {
-        "numero": "02",
-        "titulo": "Política & Sentido",
-        "descripcion": "La gestión cultural como posicionamiento frente al territorio. Construimos sentido colectivo, promoviendo la democratización y profesionalización del sector.",
-        "etiqueta": "Compromiso Social"
-      },
-      {
-        "numero": "03",
-        "titulo": "Sociedad & Red",
-        "descripcion": "El hacer humano y compartido. Articulamos diálogos entre artistas, instituciones, espacios independientes y audiencias para fortalecer la trama cultural.",
-        "etiqueta": "Hacer Colectivo"
-      }
-    ]
-  },
-  "servicios": {
-    "eyebrow": "Qué Hacemos",
-    "titulo": "Líneas de Acción",
-    "descripcion": "Acompañamos iniciativas desde su concepción teórica hasta la ejecución técnica, cuidando cada detalle del proceso.",
-    "items": [
-      {
-        "titulo": "Producción Integral",
-        "descripcion": "Coordinación logística, técnica y humana para festivales, espectáculos artísticos, muestras de arte y eventos culturales singulares en Rosario y la zona.",
-        "bullets": ["Logística y montaje técnico", "Gestión de agendas y espacios", "Coordinación de equipos"]
-      },
-      {
-        "titulo": "Curaduría & Diseño",
-        "descripcion": "Desarrollo de proyectos con alta carga simbólica e identitaria. Elaboración de discursos curatoriales, exhibiciones e intervenciones urbanas.",
-        "bullets": ["Concepto y fundamentación", "Selección y guión museográfico", "Narrativas comunicacionales"]
-      },
-      {
-        "titulo": "Consultoría Estratégica",
-        "descripcion": "Acompañamiento a organizaciones, colectivos artísticos e instituciones en la profesionalización de la gestión y búsqueda de recursos.",
-        "bullets": ["Aplicación a becas y subsidios", "Planificación y presupuesto", "Diagnóstico de públicos"]
-      }
-    ]
+  "agenda_seccion": {
+    "eyebrow": "Agenda",
+    "titulo": "PRÓXIMOS EVENTOS",
+    "descripcion": "Todos nuestros eventos, para que no te pierdas nada."
   },
   "proyectos_seccion": {
     "eyebrow": "Bitácora",
-    "titulo": "Proyectos & Experiencias"
-  },
-  "agenda_seccion": {
-    "eyebrow": "Agenda",
-    "titulo": "Próximos Eventos",
-    "descripcion": "Se cargan y actualizan directamente desde el panel de administración en /admin."
+    "titulo": "PROYECTOS Y EXPERIENCIAS"
   },
   "noticias_seccion": {
-    "eyebrow": "Novedades",
-    "titulo": "Noticias",
-    "descripcion": "Novedades de Trivento Gestión Cultural, publicadas desde el panel de administración."
+    "eyebrow": "El mundo cultural el movimiento",
+    "titulo": "CURIOSIDADES Y REFLEXIONES",
+    "descripcion": "Un intento de mantenernos al día en las discusiones y paradigmas que emergen en torno a la gestión cultural."
   },
   "contacto": {
     "eyebrow": "Sigamos Conversando",
@@ -80,10 +20,74 @@
     "ubicacion": "Rosario, Santa Fe, Argentina",
     "instagram_handle": "@culturatrivento",
     "instagram_url": "https://instagram.com/culturatrivento",
-    "email": "contacto@culturatrivento.com.ar",
+    "email": "culturatrivento@gmail.com",
     "telefono": ""
   },
+  "pilares": {
+    "eyebrow": "Nuestra esencia",
+    "titulo": "BASTIONES",
+    "descripcion": "Nuestros bastiones: la sensibilidad, la creatividad, la humanidad y la organización.",
+    "items": []
+  },
+  "hero": {
+    "ubicacion": "Rosario, Argentina",
+    "titulo": "Trivento",
+    "subtitulo": "Gestionamos Cultura",
+    "descripcion": "Somos un Equipo de Gestión y Producción Cultural que entiende la cultura como un espacio de producción de sentidos, atravesados por la política, el arte y la sociedad. Un hacer compartido, humano, sensible y honesto."
+  },
   "footer": {
-    "copyright": "© 2026 Trivento. Tres fuerzas, un viento de cambio cultural. Rosario, Argentina."
+    "copyright": "© 2026 Trivento. Gestionamos Cultura. Rosario, Argentina."
+  },
+  "manifiesto": {
+    "eyebrow": "Declaración de Intenciones",
+    "titulo": "MANIFIESTO",
+    "parrafo1": "Desde Trivento creemos que la cultura y su gestión son un ejercicio esencial con influencia constante en nuestras vidas.\nConscientes de la novedad que representa la profesionalización de la disciplina de la gestión cultural, así como de la incertidumbre que genera este trabajo, la apertura, la transparencia y la claridad en nuestras prácticas son valores innegociables.\nAl mismo tiempo, considerando que la Gestión Cultural no se limita sólo a la organización de eventos generales, sino también a la realización de proyectos singulares con una alta carga artística, social y política, buscamos impregnar en cada una de nuestras propuestas un claro simbolismo identitario; para que quienes participen de lo que ofrecemos y quienes trabajen con nosotros, conozcan y perciban el impacto que provoca un equipo de gestión y producción cultural en cualquier iniciativa que se tome.\n",
+    "parrafo2": "En ese sentido, nuestro compromiso consiste, siempre, en abrir el juego del trabajo cultural en pos de un horizonte superador, que sea colectivo, profundo y preciso. En hacer de esta una profesión que posibilite transformaciones que nos adentren en un mundo mas puro, más equilibrado y más libre. Para ello, y para proteger y potenciar todo aquel elemento que forme parte de la cultura que merecemos, la sensibilidad, la creatividad, la humanidad y la organización son los pilares fundamentales de nuestro servicio. \nPara Trivento, este es un camino lleno de misterios, porque todas las motivaciones que tenemos, se comprueban con proyectos de futuro. Proyectos de los que esperamos que ustedes siempre formen parte.",
+    "cita": "En hacer de esta una profesión que posibilite transformaciones que nos adentren en un mundo mas puro, más equilibrado y más libre."
+  },
+  "servicios": {
+    "eyebrow": "Lo que hacemos",
+    "titulo": "LÍNEAS DE TRABAJO",
+    "descripcion": "",
+    "items": [
+      {
+        "titulo": "GESTIÓN",
+        "descripcion": "Nuestra línea principal, a partir de la cual nos encargamos de llevar a cabo los proyectos.",
+        "bullets": [
+          "Diseño de Proyectos",
+          "Elaboración de Presupuestos",
+          "Elaboración de Cronogramas",
+          "Desarrollo de Ideas"
+        ]
+      },
+      {
+        "titulo": "PRODUCCIÓN",
+        "descripcion": "Bajo esta línea producimos, generamos y establecemos los aspectos materiales y concretos para la realización puntual de cada proyecto.",
+        "bullets": [
+          "Producción Artística",
+          "Producción Ejecutiva",
+          "Realización de eventos y proyectos culturales",
+          "Diseño y difusión de materiales gráficos",
+          "Efectuación de proyectos a corto, mediano y largo plazo"
+        ]
+      },
+      {
+        "titulo": "COLABORACIÓN",
+        "descripcion": "Esta línea surge de la disponibilidad para llevar adelante tareas múltiples, desde un lugar menor, en la realización de todo tipo de proyecto compartido.",
+        "bullets": [
+          "Planificación, organización y ejecución de proyectos compartidos",
+          "Cooperación con diferentes sectores",
+          "Confección, coordinación e integración de equipos de trabajo"
+        ]
+      },
+      {
+        "titulo": "ASESORAMIENTO",
+        "descripcion": "Acompañamos, aconsejamos y reflexionamos productivamente sobre situaciones e ideas particulares, de todo tipo.",
+        "bullets": [
+          "Asistencia en diseño, elaboración y realización de proyectos",
+          "Asesoramiento en Políticas Públicas y Derechos Culturales"
+        ]
+      }
+    ]
   }
 }
