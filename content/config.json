@@ -1,7 +1,7 @@
 {
   "agenda_seccion": {
     "eyebrow": "Agenda",
-    "titulo": "Próximos eventos",
+    "titulo": "Próximos Eventos",
     "descripcion": "Todos nuestros eventos, para que no te pierdas nada."
   },
   "proyectos_seccion": {
@@ -10,12 +10,12 @@
   },
   "noticias_seccion": {
     "eyebrow": "El mundo cultural el movimiento",
-    "titulo": "Novedades, curiosidades y reflexiones",
+    "titulo": "Novedades, Curiosidades y Reflexiones",
     "descripcion": "Un intento de mantenernos al día en las discusiones y paradigmas que emergen en torno a la gestión cultural."
   },
   "contacto": {
     "eyebrow": "Sigamos Conversando",
-    "titulo": "Hagamos red",
+    "titulo": "Hagamos Red",
     "descripcion": "Si tenés una idea, un proyecto en desarrollo o buscas articular iniciativas culturales con nuestro equipo, dejanos tu mensaje.",
     "ubicacion": "Rosario, Santa Fe, Argentina",
     "instagram_handle": "@culturatrivento",
