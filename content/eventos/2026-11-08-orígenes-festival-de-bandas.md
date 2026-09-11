@@ -1,7 +1,7 @@
 ---
 title: "ORÍGENES: Festival de Bandas"
 date: 2026-11-07T21:00:00-03:00
-image: /images/uploads/whatsapp-image-2026-09-03-at-14.21.40.jpeg
+image: /images/uploads/orígenes-festival.jpg
 excerpt: "\n"
 ---
 Nadie sabe cuándo algo comienza…
