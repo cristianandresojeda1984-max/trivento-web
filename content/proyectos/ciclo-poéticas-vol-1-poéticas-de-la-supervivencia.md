@@ -1,5 +1,5 @@
 ---
-title: "Ciclo Poéticas - Vol. 1: Poéticas de la Supervivencia"
+title: "Ciclo Poéticas - Vol. 1: Poéticas de la Supervivencia."
 categoria: Producciones Trivento Presenta
 ubicacion: Rosario, Santa Fe, Argentina
 anio: "2025"
