@@ -3,6 +3,7 @@ title: Trabajo con Juan Aspeitia.
 categoria: Asesorate con Trivento
 ubicacion: Rosario, Santa Fe, Argentina
 anio: "2025"
+image: /images/uploads/placa-5-mod-100.jpg
 excerpt: Durante 2 meses, Asesoramos al Artista, Producto Musical y Docente Juan
   Aspeitia, quien requería que, a partir de un Curso de Producción Musical en
   Ableton Live que el tenía ya elaborado, le hicierna un Trabajo de
