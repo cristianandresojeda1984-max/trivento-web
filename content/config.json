@@ -2,25 +2,25 @@
   "agenda_seccion": {
     "eyebrow": "Agenda",
     "titulo": "Próximos Eventos",
-    "descripcion": "Todos nuestros eventos, para que no te pierdas nada."
+    "descripcion": "Todos nuestros Eventos, para que no te pierdas nada."
   },
   "proyectos_seccion": {
     "eyebrow": "Bitácora",
     "titulo": "Proyectos y Experiencias"
   },
   "noticias_seccion": {
-    "eyebrow": "El mundo cultural el movimiento",
+    "eyebrow": "El mundo cultural en movimiento",
     "titulo": "Novedades, Curiosidades y Reflexiones",
-    "descripcion": "Un intento de mantenernos al día en las discusiones y paradigmas que emergen en torno a la gestión cultural."
+    "descripcion": "Nos mantenemos al día en las discusiones y paradigmas que emergen en torno a la Gestión Cultural."
   },
   "contacto": {
     "eyebrow": "Sigamos Conversando",
     "titulo": "Hagamos Red",
     "descripcion": "Si tenés una idea, un proyecto en desarrollo o buscas articular iniciativas culturales con nuestro equipo, dejanos tu mensaje.",
     "ubicacion": "Rosario, Santa Fe, Argentina",
-    "instagram_handle": "@culturatrivento",
+    "instagram_handle": "@CulturaTrivento",
     "instagram_url": "https://instagram.com/culturatrivento",
-    "email": "culturatrivento@gmail.com",
+    "email": "CulturaTrivento@gmail.com",
     "telefono": ""
   },
   "pilares": {
@@ -33,10 +33,10 @@
     "ubicacion": "Rosario, Santa Fe, Argentina.",
     "titulo": "Trivento",
     "subtitulo": "Gestionamos Cultura",
-    "descripcion": "Somos un Equipo de Gestión y Producción Cultural que entiende la cultura como un espacio de producción de sentidos, atravesados por la política, el arte y la sociedad."
+    "descripcion": "Somos un Equipo de Gestión y Producción Cultural que entiende la Cultura como un espacio de producción de sentidos, atravesados por la política, el arte y la sociedad."
   },
   "footer": {
-    "copyright": "© 2026 Trivento. Gestionamos Cultura. Rosario, Argentina."
+    "copyright": "© 2026 Trivento. Gestionamos Cultura. Rosario, Santa Fe, Argentina."
   },
   "manifiesto": {
     "eyebrow": "Declaración de Intenciones",
@@ -54,29 +54,29 @@
         "titulo": "GESTIÓN",
         "descripcion": "Nuestra línea principal, a partir de la cual nos encargamos de llevar a cabo los proyectos.",
         "bullets": [
-          "Diseño de Proyectos",
-          "Elaboración de Presupuestos",
-          "Elaboración de Cronogramas",
-          "Desarrollo de Ideas"
+          "Diseño de proyectos.",
+          "Elaboración de presupuestos.",
+          "Elaboración de cronogramas.",
+          "Desarrollo de ideas."
         ]
       },
       {
         "titulo": "PRODUCCIÓN",
         "descripcion": "Bajo esta línea producimos, generamos y establecemos los aspectos materiales y concretos para la realización puntual de cada proyecto.",
         "bullets": [
-          "Producción Artística",
-          "Producción Ejecutiva",
-          "Realización de eventos y proyectos culturales",
-          "Diseño y difusión de materiales gráficos",
-          "Efectuación de proyectos a corto, mediano y largo plazo"
+          "Producción artística.",
+          "Producción ejecutiva.",
+          "Realización de eventos y proyectos culturales.",
+          "Diseño y difusión de materiales gráficos.",
+          "Efectuación de proyectos a corto, mediano y largo plazo."
         ]
       },
       {
         "titulo": "COLABORACIÓN",
         "descripcion": "Esta línea surge de la disponibilidad para llevar adelante tareas múltiples, desde un lugar menor, en la realización de todo tipo de proyecto compartido.",
         "bullets": [
-          "Planificación, organización y ejecución de proyectos compartidos",
-          "Cooperación con diferentes sectores",
+          "Planificación, organización y ejecución de proyectos compartidos.",
+          "Cooperación con diferentes sectores.",
           "Confección, coordinación e integración de equipos de trabajo"
         ]
       },
@@ -84,8 +84,8 @@
         "titulo": "ASESORAMIENTO",
         "descripcion": "Acompañamos, aconsejamos y reflexionamos productivamente sobre situaciones e ideas particulares, de todo tipo.",
         "bullets": [
-          "Asistencia en diseño, elaboración y realización de proyectos",
-          "Asesoramiento en Políticas Públicas y Derechos Culturales"
+          "Asistencia en diseño, elaboración y realización de proyectos.",
+          "Asesoramiento en Políticas Públicas y Derechos Culturales."
         ]
       }
     ]
