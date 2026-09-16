@@ -1,5 +1,5 @@
 ---
-title: "Ciclo Poéticas - Vol. 2: Poéticas de la Nocturnidad"
+title: "Ciclo Poéticas - Vol. 2: Poéticas de la Nocturnidad."
 categoria: Producciones Trivento Presenta
 ubicacion: Rosario, Santa Fe, Argentina
 anio: "2025"
