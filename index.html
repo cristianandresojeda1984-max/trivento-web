@@ -137,7 +137,7 @@
     <p id="manifiesto-parrafo2" class="text-lg text-gray-600 leading-relaxed mb-6"></p>
     <p id="manifiesto-cita" class="italic font-serif text-xl text-gray-700 mb-8"></p>
     <a href="#pilares" class="inline-flex items-center gap-2 text-trivento-600 font-semibold hover:text-trivento-700">
-      Leer manifiesto completo <i class="fa-solid fa-arrow-right"></i>
+      Leer Manifiesto completo <i class="fa-solid fa-arrow-right"></i>
     </a>
   </div>
 </section>
@@ -311,6 +311,8 @@
     );
   }
 
+  var proyectosData = [];
+    var eventosData = [];
   // ---- Configuración general (hero, manifiesto, pilares, servicios, contacto, footer) ----
   function aplicarConfig(cfg) {
     if (!cfg || typeof cfg !== "object") return;
@@ -428,13 +430,13 @@
     .catch(function () {});
 
   // ---- Proyectos (tarjetas con imagen, categoría, ubicación y año) ----
-  function proyectoCardHtml(item) {
+  function proyectoCardHtml(item, idx) {
     var imgHtml = item.image
       ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-56 object-cover">'
       : '<div class="w-full h-56 card-img-fallback flex items-center justify-center text-white/70 text-3xl"><i class="fa-solid fa-images"></i></div>';
     var meta = [item.ubicacion, item.anio].filter(Boolean).join(" • ");
     return (
-      '<article class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">' +
+      '<article data-idx="' + idx + '" class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer hover:shadow-md transition">' +
       '<div class="relative">' +
       imgHtml +
       (item.categoria ? '<span class="absolute top-0 left-0 bg-white text-trivento-700 text-[11px] font-semibold tracking-wide uppercase px-3 py-1.5 rounded-tl-2xl rounded-br-lg">' + item.categoria + "</span>" : "") +
@@ -455,19 +457,22 @@
       el.innerHTML = items.length
         ? items.map(proyectoCardHtml).join("")
         : emptyStateHtml("Todavía no hay proyectos cargados. Se van a mostrar acá apenas se publiquen desde /admin.");
+    proyectosData = items;
     })
     .catch(function () {});
 
   // ---- Eventos y Noticias (cargados desde el CMS) ----
-  function cardHtml(item, iconClass) {
+  function cardHtml(item, iconClass, idx, clickable) {
     var imgHtml = item.image
       ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-48 object-cover">'
       : '<div class="w-full h-48 card-img-fallback flex items-center justify-center text-white/70 text-3xl"><i class="' + iconClass + '"></i></div>';
     var full = item.excerpt || "";
         var esLarga = full.length > 150;
         var corto = esLarga ? full.slice(0, 150) + "…" : full;
+    var claseClick = clickable ? " cursor-pointer hover:shadow-md transition" : "";
+    var idxAttr = clickable ? ' data-idx="' + idx + '"' : "";
     return (
-      '<article class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white">' +
+      '<article' + idxAttr + ' class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white' + claseClick + '">' +
       imgHtml +
       '<div class="p-6">' +
       '<p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">' + formatFecha(item.date) + "</p>" +
@@ -484,9 +489,10 @@
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
         items.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+        if (containerId === "eventos-grid") eventosData = items;
         var el = document.getElementById(containerId);
         el.innerHTML = items.length
-          ? items.map(function (item) { return cardHtml(item, iconClass); }).join("")
+          ? items.map(function (item, i) { return cardHtml(item, iconClass, i, containerId === "eventos-grid"); }).join("")
           : emptyStateHtml(emptyText);
       })
       .catch(function () {
@@ -510,6 +516,82 @@
                 e.target.setAttribute("data-abierto", "1");
         }
   });
+document.body.insertAdjacentHTML("beforeend",
+                                 '<div id="detalle-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">' +
+                                 '<div id="detalle-backdrop" class="absolute inset-0 bg-black/60"></div>' +
+                                 '<div class="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl">' +
+                                 '<button id="detalle-cerrar" type="button" class="absolute top-3 right-3 z-10 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow hover:bg-gray-100" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>' +
+                                 '<div id="detalle-img-wrap"></div>' +
+                                 '<div class="p-6">' +
+                                 '<p id="detalle-meta" class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2"></p>' +
+                                 '<h3 id="detalle-titulo" class="font-serif font-bold text-2xl text-gray-900 mb-4"></h3>' +
+                                 '<div id="detalle-descripcion" class="text-gray-700 text-sm leading-relaxed"></div>' +
+                                 '</div>' +
+                                 '</div>' +
+                                 '</div>'
+                                 );
+function escapeHtml(s) {
+  return String(s == null ? "" : s)
+  .replace(/&/g, "&amp;")
+  .replace(/</g, "&lt;")
+  .replace(/>/g, "&gt;")
+  .replace(/"/g, "&quot;");
+}
+function simpleMarkdown(text) {
+  var t = escapeHtml(text || "");
+  t = t.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  t = t.replace(/(^|[\s(])(https?:\/\/[^\s<>()]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+  var parrafos = t.split(/\n\s*\n/).map(function (p) { return "<p>" + p.replace(/\n/g, "<br>") + "</p>"; });
+  return parrafos.join("");
+}
+function abrirDetalle(opts) {
+  var imgWrap = document.getElementById("detalle-img-wrap");
+  if (opts.image) {
+    imgWrap.innerHTML = '<img src="' + opts.image + '" alt="' + escapeHtml(opts.title || "") + '" class="w-full h-64 object-cover">';
+  } else {
+    imgWrap.innerHTML = '<div class="w-full h-32 bg-trivento-50 flex items-center justify-center text-trivento-300 text-3xl"><i class="fa-solid fa-image"></i></div>';
+  }
+  document.getElementById("detalle-meta").textContent = opts.meta || "";
+  document.getElementById("detalle-titulo").textContent = opts.title || "";
+  document.getElementById("detalle-descripcion").innerHTML = simpleMarkdown(opts.descripcion || "");
+  var modal = document.getElementById("detalle-modal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+function cerrarDetalle() {
+  var modal = document.getElementById("detalle-modal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+document.getElementById("detalle-cerrar").addEventListener("click", cerrarDetalle);
+document.getElementById("detalle-backdrop").addEventListener("click", cerrarDetalle);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") cerrarDetalle();
+});
+document.getElementById("proyectos-grid").addEventListener("click", function (e) {
+  var art = e.target.closest("article");
+  if (!art) return;
+  var idx = art.getAttribute("data-idx");
+  if (idx === null) return;
+  var item = proyectosData[Number(idx)];
+  if (!item) return;
+  var meta = [item.ubicacion, item.anio].filter(Boolean).join(" • ");
+  abrirDetalle({ image: item.image, title: item.title, meta: meta, descripcion: item.excerpt });
+});
+document.getElementById("eventos-grid").addEventListener("click", function (e) {
+  if (e.target.classList.contains("leer-mas")) return;
+  var art = e.target.closest("article");
+  if (!art) return;
+  var idx = art.getAttribute("data-idx");
+  if (idx === null) return;
+  var item = eventosData[Number(idx)];
+  if (!item) return;
+  abrirDetalle({ image: item.image, title: item.title, meta: formatFecha(item.date), descripcion: item.body || item.excerpt });
+});
 </script>
 
 </body>
