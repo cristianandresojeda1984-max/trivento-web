@@ -42,7 +42,7 @@ function parseFrontmatter(raw) {
     let value = kv[2].trim();
 
     // Bloques multilínea estilo YAML (| o >): el valor real viene en las líneas siguientes
-    if (value === "|" || value === ">" || value === "") {
+    if (value === "" || /^[|>][+-]?\d*$/.test(value)) {
       currentKey = key;
       data[key] = "";
       return;
@@ -77,6 +77,7 @@ function readCollection(folder) {
         date: data.date || "",
         image: data.image || "",
         excerpt: data.excerpt || body.replace(/[#*_>`]/g, "").slice(0, 160),
+        body: body || "",
         slug: file.replace(/\.md$/, ""),
       };
     });
