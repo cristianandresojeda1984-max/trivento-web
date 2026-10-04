@@ -8,5 +8,5 @@ excerpt: >-
   Primer encuentro del Ciclo "Poéticas". Un ciclo de poesía independiente de la
   ciudad de Rosario, una vía alternativa de pensar nuestro presente.
 
-  Llevado a cabo el día 6 de marzo de 2025, en el SUM de HomoSapiens, en Rosario.
+  Llevado a cabo el día 6 de Marzo de 2025, en el SUM de HomoSapiens, en Rosario.
 ---
