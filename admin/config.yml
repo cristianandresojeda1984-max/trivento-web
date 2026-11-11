@@ -112,6 +112,13 @@ collections:
             fields:
               - { label: "Texto de copyright", name: "copyright", widget: "string" }
 
+          - label: "Encabezado de Clientes"
+            name: "clientes_seccion"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño (eyebrow)", name: "eyebrow", widget: "string" }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Descripción", name: "descripcion", widget: "text" }
   - name: "proyectos"
     label: "Proyectos"
     label_singular: "Proyecto"
@@ -119,6 +126,8 @@ collections:
     create: true
     slug: "{{slug}}"
     summary: "{{title}} — {{ubicacion}} {{anio}}"
+    media_folder: "/images/uploads/proyectos"
+    public_folder: "/images/uploads/proyectos"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Categoría (ej: Producción, Curaduría, Encuentro)", name: "categoria", widget: "string" }
@@ -134,6 +143,8 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} — {{date}}"
+    media_folder: "/images/uploads/eventos"
+    public_folder: "/images/uploads/eventos"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
@@ -148,9 +159,24 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} — {{date}}"
+    media_folder: "/images/uploads/noticias"
+    public_folder: "/images/uploads/noticias"
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ssZ" }
       - { label: "Imagen de portada", name: "image", widget: "image", required: false }
       - { label: "Descripción", name: "excerpt", widget: "text", required: false, hint: "Resumen corto que se muestra en la tarjeta de la noticia (opcional)." }
       - { label: "Cuerpo", name: "body", widget: "markdown" }
+  - name: "clientes"
+    label: "Clientes"
+    label_singular: "Cliente"
+    folder: "content/clientes"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{nombre}}"
+    media_folder: "/images/uploads/clientes"
+    public_folder: "/images/uploads/clientes"
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Logo o foto", name: "logo", widget: "image", required: false, hint: "Recomendado: imagen cuadrada, idealmente con fondo transparente (PNG), 400x400px." }
+      - { label: "Testimonio (opcional)", name: "testimonio", widget: "text", required: false, hint: "Una frase corta del cliente sobre el trabajo en conjunto (opcional)." }
