@@ -71,6 +71,7 @@
       <a href="#pilares" class="hover:text-trivento-600 transition">Pilares</a>
       <a href="#servicios" class="hover:text-trivento-600 transition">Servicios</a>
       <a href="#proyectos" class="hover:text-trivento-600 transition">Proyectos</a>
+      <a href="#clientes" class="hover:text-trivento-600 transition">Clientes</a>
       <a href="#agenda" class="hover:text-trivento-600 transition">Agenda</a>
       <a href="#noticias" class="hover:text-trivento-600 transition">Noticias</a>
       <a href="#contacto" class="hover:text-trivento-600 transition">Contacto</a>
@@ -95,6 +96,7 @@
     <a href="#pilares" class="block py-1">Pilares</a>
     <a href="#servicios" class="block py-1">Servicios</a>
     <a href="#proyectos" class="block py-1">Proyectos</a>
+    <a href="#clientes" class="block py-1">Clientes</a>
     <a href="#agenda" class="block py-1">Agenda</a>
     <a href="#noticias" class="block py-1">Noticias</a>
     <a href="#contacto" class="block py-1 text-trivento-600 font-semibold">Contacto</a>
@@ -169,6 +171,18 @@
       </div>
     </div>
     <div id="proyectos-grid" class="grid md:grid-cols-3 gap-8"></div>
+  </div>
+</section>
+
+<!-- Clientes -->
+<section id="clientes" class="bg-trivento-50 py-24 px-5 sm:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-12 text-center">
+      <p id="clientes-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Confían en Nosotros</p>
+      <h2 id="clientes-titulo" class="font-serif font-bold text-4xl sm:text-5xl text-gray-900 mb-4">Clientes</h2>
+      <p id="clientes-descripcion" class="text-gray-600 font-light max-w-2xl mx-auto"></p>
+    </div>
+    <div id="clientes-grid" class="grid sm:grid-cols-2 md:grid-cols-4 gap-8"></div>
   </div>
 </section>
 
@@ -387,6 +401,12 @@
       setText("noticias-descripcion", cfg.noticias_seccion.descripcion);
     }
 
+    if (cfg.clientes_seccion) {
+      setText("clientes-eyebrow", cfg.clientes_seccion.eyebrow);
+      setText("clientes-titulo", cfg.clientes_seccion.titulo);
+      setText("clientes-descripcion", cfg.clientes_seccion.descripcion);
+    }
+
     if (cfg.contacto) {
       setText("contacto-eyebrow", cfg.contacto.eyebrow);
       setText("contacto-titulo", cfg.contacto.titulo);
@@ -456,7 +476,29 @@
     proyectosData = items;
     })
     .catch(function () {});
-
+  // ---- Clientes (logos y testimonios, sin modal) ----
+  function clienteCardHtml(item) {
+    var imgHtml = item.logo
+      ? '<img src="' + item.logo + '" alt="' + (item.nombre || "").replace(/"/g, "&quot;") + '" class="w-full h-32 object-contain">'
+      : '<div class="w-full h-32 card-img-fallback flex items-center justify-center text-white/70 text-3xl"><i class="fa-solid fa-building"></i></div>';
+    return (
+      '<div class="rounded-2xl border border-gray-100 shadow-sm bg-white p-6 flex flex-col items-center text-center">' +
+      imgHtml +
+      '<p class="font-serif font-bold text-gray-900 mt-4 mb-2">' + (item.nombre || "") + "</p>" +
+      (item.testimonio ? '<p class="text-gray-600 text-sm leading-relaxed">' + item.testimonio + "</p>" : "") +
+      "</div>"
+    );
+  }
+  fetch("/data/clientes.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (items) {
+      var el = document.getElementById("clientes-grid");
+      el.innerHTML = items.length
+        ? items.map(clienteCardHtml).join("")
+        : emptyStateHtml("Todavía no hay clientes cargados. Se van a mostrar acá apenas se publiquen desde /admin.");
+    })
+    .catch(function () {});
+  
   // ---- Eventos y Noticias (cargados desde el CMS) ----
   function cardHtml(item, iconClass, idx, clickable) {
     var imgHtml = item.image
