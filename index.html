@@ -71,7 +71,7 @@
       <a href="#pilares" class="hover:text-trivento-600 transition">Pilares</a>
       <a href="#servicios" class="hover:text-trivento-600 transition">Servicios</a>
       <a href="#proyectos" class="hover:text-trivento-600 transition">Proyectos</a>
-      <a href="#clientes" class="hover:text-trivento-600 transition">Clientes</a>
+      <a href="#clientes" id="nav-clientes-desktop" class="hover:text-trivento-600 transition" hidden>Clientes</a>
       <a href="#agenda" class="hover:text-trivento-600 transition">Agenda</a>
       <a href="#noticias" class="hover:text-trivento-600 transition">Noticias</a>
       <a href="#contacto" class="hover:text-trivento-600 transition">Contacto</a>
@@ -96,7 +96,7 @@
     <a href="#pilares" class="block py-1">Pilares</a>
     <a href="#servicios" class="block py-1">Servicios</a>
     <a href="#proyectos" class="block py-1">Proyectos</a>
-    <a href="#clientes" class="block py-1">Clientes</a>
+    <a href="#clientes" id="nav-clientes-mobile" class="block py-1" hidden>Clientes</a>
     <a href="#agenda" class="block py-1">Agenda</a>
     <a href="#noticias" class="block py-1">Noticias</a>
     <a href="#contacto" class="block py-1 text-trivento-600 font-semibold">Contacto</a>
@@ -175,7 +175,7 @@
 </section>
 
 <!-- Clientes -->
-<section id="clientes" class="bg-trivento-50 py-24 px-5 sm:px-8">
+<section id="clientes" class="bg-trivento-50 py-24 px-5 sm:px-8" hidden>
   <div class="max-w-6xl mx-auto">
     <div class="mb-12 text-center">
       <p id="clientes-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Confían en Nosotros</p>
@@ -490,16 +490,18 @@
     );
   }
   fetch("/data/clientes.json", { cache: "no-store" })
-    .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (r) { return r.ok ? r.json() : []; })  
     .then(function (items) {
-      var el = document.getElementById("clientes-grid");
-      el.innerHTML = items.length
-        ? items.map(clienteCardHtml).join("")
-        : emptyStateHtml("Todavía no hay clientes cargados. Se van a mostrar acá apenas se publiquen desde /admin.");
-    })
-    .catch(function () {});
-  
-  // ---- Eventos y Noticias (cargados desde el CMS) ----
+    if (!items.length) return;
+    var el = document.getElementById("clientes-grid");
+    el.innerHTML = items.map(clienteCardHtml).join("");
+    document.getElementById("clientes").hidden = false;
+    document.getElementById("nav-clientes-desktop").hidden = false;
+    document.getElementById("nav-clientes-mobile").hidden = false;
+  })
+  .catch(function () {});
+
+// ---- Eventos y Noticias (cargados desde el CMS) ----
   function cardHtml(item, iconClass, idx, clickable) {
     var imgHtml = item.image
       ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-48 object-cover">'
