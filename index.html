@@ -1,57 +1,72 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trivento | Gestión Cultural</title>
-<meta name="description" content="Trivento Gestión Cultural: producción integral, curaduría, consultoría estratégica, agenda de eventos y noticias culturales en Rosario, Argentina." />
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivento | Gestión Cultural</title>
+  <meta name="description" content="Trivento Gestión Cultural: producción integral, curaduría, consultoría estratégica, agenda de eventos y noticias culturales en Rosario, Argentina." />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+  <link rel="canonical" href="https://culturatrivento.com.ar/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Trivento Gestión Cultural" />
+  <meta property="og:title" content="Trivento | Gestión Cultural" />
+  <meta property="og:description" content="Trivento Gestión Cultural: producción integral, curaduría, consultoría estratégica, agenda de eventos y noticias culturales en Rosario, Argentina." />
+  <meta property="og:image" content="https://culturatrivento.com.ar/images/og-cover.png" />
+  <meta property="og:url" content="https://culturatrivento.com.ar/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trivento | Gestión Cultural" />
+  <meta name="twitter:description" content="Trivento Gestión Cultural: producción integral, curaduría, consultoría estratégica, agenda de eventos y noticias culturales en Rosario, Argentina." />
+  <meta name="twitter:image" content="https://culturatrivento.com.ar/images/og-cover.png" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>if(window.netlifyIdentity){window.netlifyIdentity.on("init",function(user){if(!user){window.netlifyIdentity.on("login",function(){document.location.href="/admin/";});}});}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          trivento: {
-            50: "#f2f8f5",
-            100: "#e6f2ed",
-            200: "#c3e2d5",
-            300: "#8fc7ab",
-            400: "#00a36f",
-            500: "#007a53",
-            600: "#00623f",
-            700: "#00583c",
-            800: "#004a31",
-            900: "#003d29",
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            trivento: {
+              50: "#f2f8f5",
+              100: "#e6f2ed",
+              200: "#c3e2d5",
+              300: "#8fc7ab",
+              400: "#00a36f",
+              500: "#007a53",
+              600: "#00623f",
+              700: "#00583c",
+              800: "#004a31",
+              900: "#003d29",
+            },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', "serif"],
+            sans: ['"Inter"', "sans-serif"],
           },
         },
-        fontFamily: {
-          serif: ['"Playfair Display"', "serif"],
-          sans: ['"Inter"', "sans-serif"],
-        },
       },
-    },
-  };
-</script>
-<style>
-  html { scroll-behavior: smooth; }
-  body { font-family: "Inter", sans-serif; }
-  .font-serif { font-family: "Playfair Display", serif; }
-  .dotted-bg {
-    background-image: radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px);
-    background-size: 22px 22px;
-  }
-  .card-img-fallback {
-    background: linear-gradient(135deg, #00583c, #007a53);
-  }
-  [data-skeleton] { color: transparent !important; }
-  [hidden] { display: none !important; }
-</style>
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", sans-serif; }
+    .font-serif { font-family: "Playfair Display", serif; }
+    .dotted-bg {
+      background-image: radial-gradient(rgba(255,255,255,0.18) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+    }
+    .card-img-fallback {
+      background: linear-gradient(135deg, #00583c, #007a53);
+    }
+    [data-skeleton] { color: transparent !important; }
+    [hidden] { display: none !important; }
+    summary::-webkit-details-marker { display: none; }
+    summary::marker { content: ""; }
+  </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
 
@@ -70,10 +85,10 @@
       <a href="#manifiesto" class="hover:text-trivento-600 transition">Manifiesto</a>
       <a href="#pilares" class="hover:text-trivento-600 transition">Pilares</a>
       <a href="#servicios" class="hover:text-trivento-600 transition">Servicios</a>
-      <a href="#proyectos" class="hover:text-trivento-600 transition">Proyectos</a>
+      <a href="#proyectos" id="nav-proyectos-desktop" class="hover:text-trivento-600 transition" hidden>Proyectos</a>
       <a href="#clientes" id="nav-clientes-desktop" class="hover:text-trivento-600 transition" hidden>Clientes</a>
-      <a href="#agenda" class="hover:text-trivento-600 transition">Agenda</a>
-      <a href="#noticias" class="hover:text-trivento-600 transition">Noticias</a>
+      <a href="#agenda" id="nav-agenda-desktop" class="hover:text-trivento-600 transition" hidden>Agenda</a>
+      <a href="#noticias" id="nav-noticias-desktop" class="hover:text-trivento-600 transition" hidden>Noticias</a>
       <a href="#contacto" class="hover:text-trivento-600 transition">Contacto</a>
     </nav>
 
@@ -95,10 +110,10 @@
     <a href="#manifiesto" class="block py-1">Manifiesto</a>
     <a href="#pilares" class="block py-1">Pilares</a>
     <a href="#servicios" class="block py-1">Servicios</a>
-    <a href="#proyectos" class="block py-1">Proyectos</a>
+    <a href="#proyectos" id="nav-proyectos-mobile" class="block py-1" hidden>Proyectos</a>
     <a href="#clientes" id="nav-clientes-mobile" class="block py-1" hidden>Clientes</a>
-    <a href="#agenda" class="block py-1">Agenda</a>
-    <a href="#noticias" class="block py-1">Noticias</a>
+    <a href="#agenda" id="nav-agenda-mobile" class="block py-1" hidden>Agenda</a>
+    <a href="#noticias" id="nav-noticias-mobile" class="block py-1" hidden>Noticias</a>
     <a href="#contacto" class="block py-1 text-trivento-600 font-semibold">Contacto</a>
   </div>
 </header>
@@ -135,9 +150,16 @@
   <div class="max-w-3xl mx-auto text-center">
     <p id="manifiesto-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Nuestra Esencia</p>
     <h2 id="manifiesto-titulo" class="font-serif font-bold text-3xl sm:text-4xl text-gray-900 mb-8">Declaración de Intenciones</h2>
-    <p id="manifiesto-parrafo1" class="text-lg text-gray-600 leading-relaxed mb-6"></p>
-    <p id="manifiesto-parrafo2" class="text-lg text-gray-600 leading-relaxed mb-6"></p>
     <p id="manifiesto-cita" class="italic font-serif text-xl text-gray-700 mb-8"></p>
+    <details class="group">
+      <summary class="w-full cursor-pointer select-none mb-6 inline-flex items-center justify-center gap-2 text-trivento-600 font-semibold text-sm hover:text-trivento-700">
+        <span class="group-open:hidden">Leer manifiesto completo</span>
+        <span class="hidden group-open:inline">Leer menos</span>
+        <i class="fa-solid fa-chevron-down text-xs transition-transform group-open:rotate-180"></i>
+      </summary>
+      <p id="manifiesto-parrafo1" class="text-lg text-gray-600 leading-relaxed mb-6"></p>
+      <p id="manifiesto-parrafo2" class="text-lg text-gray-600 leading-relaxed"></p>
+    </details>
   </div>
 </section>
 
@@ -162,7 +184,7 @@
 </section>
 
 <!-- Proyectos -->
-<section id="proyectos" class="bg-white py-24 px-5 sm:px-8">
+<section id="proyectos" class="bg-white py-24 px-5 sm:px-8" hidden>
   <div class="max-w-6xl mx-auto">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
       <div>
@@ -187,7 +209,7 @@
 </section>
 
 <!-- Agenda / Eventos (CMS) -->
-<section id="agenda" class="bg-trivento-50 py-24 px-5 sm:px-8">
+<section id="agenda" class="bg-trivento-50 py-24 px-5 sm:px-8" hidden>
   <div class="max-w-6xl mx-auto">
     <div class="mb-12">
       <p id="agenda-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Agenda</p>
@@ -199,7 +221,7 @@
 </section>
 
 <!-- Noticias (CMS) -->
-<section id="noticias" class="bg-white py-24 px-5 sm:px-8">
+<section id="noticias" class="bg-white py-24 px-5 sm:px-8" hidden>
   <div class="max-w-6xl mx-auto">
     <div class="mb-12">
       <p id="noticias-eyebrow" class="text-trivento-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Novedades</p>
@@ -249,7 +271,7 @@
       </div>
     </div>
 
-    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="bg-white border border-trivento-100 rounded-2xl p-8 space-y-5">
+    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias/" class="bg-white border border-trivento-100 rounded-2xl p-8 space-y-5">
       <input type="hidden" name="form-name" value="contacto" />
       <p class="hidden">
         <label>No completar: <input name="bot-field" /></label>
@@ -313,16 +335,9 @@
     }
   }
 
-  function emptyStateHtml(text) {
-    return (
-      '<div class="md:col-span-3 border border-dashed border-trivento-200 rounded-2xl p-10 text-center text-gray-500">' +
-      text +
-      "</div>"
-    );
-  }
-
   var proyectosData = [];
-    var eventosData = [];
+  var eventosData = [];
+  var noticiasData = [];
   // ---- Configuración general (hero, manifiesto, pilares, servicios, contacto, footer) ----
   function aplicarConfig(cfg) {
     if (!cfg || typeof cfg !== "object") return;
@@ -351,10 +366,10 @@
         pilaresGrid.innerHTML = cfg.pilares.items.map(function (item) {
           return (
             '<div class="bg-white/5 border border-white/10 rounded-2xl p-8">' +
-            '<span class="font-serif text-4xl text-trivento-300 font-bold">' + (item.numero || "") + "</span>" +
-            '<h3 class="font-serif font-bold text-2xl mt-4 mb-3">' + (item.titulo || "") + "</h3>" +
-            '<p class="text-green-100/80 font-light leading-relaxed mb-6">' + (item.descripcion || "") + "</p>" +
-            '<p class="text-xs tracking-[0.2em] uppercase text-trivento-300">' + (item.etiqueta || "") + "</p>" +
+              '<span class="font-serif text-4xl text-trivento-300 font-bold">' + (item.numero || "") + "</span>" +
+              '<h3 class="font-serif font-bold text-2xl mt-4 mb-3">' + (item.titulo || "") + "</h3>" +
+              '<p class="text-green-100/80 font-light leading-relaxed mb-6">' + (item.descripcion || "") + "</p>" +
+              '<p class="text-xs tracking-[0.2em] uppercase text-trivento-300">' + (item.etiqueta || "") + "</p>" +
             "</div>"
           );
         }).join("");
@@ -375,9 +390,9 @@
           }).join("");
           return (
             '<div class="bg-trivento-700 text-white rounded-2xl p-8">' +
-            '<h3 class="font-serif font-bold text-2xl mb-3">' + (item.titulo || "") + "</h3>" +
-            '<p class="text-green-50/80 font-light leading-relaxed mb-6">' + (item.descripcion || "") + "</p>" +
-            '<ul class="space-y-2 text-sm">' + bulletsHtml + "</ul>" +
+              '<h3 class="font-serif font-bold text-2xl mb-3">' + (item.titulo || "") + "</h3>" +
+              '<p class="text-green-50/80 font-light leading-relaxed mb-6">' + (item.descripcion || "") + "</p>" +
+              '<ul class="space-y-2 text-sm">' + bulletsHtml + "</ul>" +
             "</div>"
           );
         }).join("");
@@ -448,20 +463,18 @@
   // ---- Proyectos (tarjetas con imagen, categoría, ubicación y año) ----
   function proyectoCardHtml(item, idx) {
     var imgHtml = item.image
-      ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-56 object-cover">'
+      ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-56 object-cover" loading="lazy" decoding="async">'
       : '<div class="w-full h-56 card-img-fallback flex items-center justify-center text-white/70 text-3xl"><i class="fa-solid fa-images"></i></div>';
     var meta = [item.ubicacion, item.anio].filter(Boolean).join(" • ");
     return (
       '<article data-idx="' + idx + '" class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm cursor-pointer hover:shadow-md transition">' +
-      '<div class="relative">' +
-      imgHtml +
-      (item.categoria ? '<span class="absolute top-0 left-0 bg-white text-trivento-700 text-[11px] font-semibold tracking-wide uppercase px-3 py-1.5 rounded-tl-2xl rounded-br-lg">' + item.categoria + "</span>" : "") +
-      "</div>" +
-      '<div class="p-6">' +
-      (meta ? '<p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">' + meta + "</p>" : "") +
-      '<h3 class="font-serif font-bold text-xl text-gray-900 mb-2">' + (item.title || "") + "</h3>" +
-      '<p class="text-gray-600 text-sm leading-relaxed">' + (item.excerpt || "") + "</p>" +
-      "</div>" +
+        (item.categoria ? '<p class="bg-trivento-700 text-white text-[11px] font-semibold tracking-wide uppercase px-4 py-2">' + item.categoria + "</p>" : "") +
+        imgHtml +
+        '<div class="p-6">' +
+          (meta ? '<p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">' + meta + "</p>" : "") +
+          '<h3 class="font-serif font-bold text-xl text-gray-900 mb-2">' + (item.title || "") + "</h3>" +
+          '<p class="text-gray-600 text-sm leading-relaxed">' + (item.excerpt || "") + "</p>" +
+        "</div>" +
       "</article>"
     );
   }
@@ -469,170 +482,197 @@
   fetch("/data/proyectos.json", { cache: "no-store" })
     .then(function (r) { return r.ok ? r.json() : []; })
     .then(function (items) {
+      if (!items.length) return;
       var el = document.getElementById("proyectos-grid");
-      el.innerHTML = items.length
-        ? items.map(proyectoCardHtml).join("")
-        : emptyStateHtml("Todavía no hay proyectos cargados. Se van a mostrar acá apenas se publiquen desde /admin.");
-    proyectosData = items;
+      el.innerHTML = items.map(proyectoCardHtml).join("");
+      proyectosData = items;
+      document.getElementById("proyectos").hidden = false;
+      document.getElementById("nav-proyectos-desktop").hidden = false;
+      document.getElementById("nav-proyectos-mobile").hidden = false;
     })
     .catch(function () {});
+
   // ---- Clientes (logos y testimonios, sin modal) ----
   function clienteCardHtml(item) {
     var imgHtml = item.logo
-      ? '<img src="' + item.logo + '" alt="' + (item.nombre || "").replace(/"/g, "&quot;") + '" class="w-full h-32 object-contain">'
+      ? '<img src="' + item.logo + '" alt="' + (item.nombre || "").replace(/"/g, "&quot;") + '" class="w-full h-32 object-contain" loading="lazy" decoding="async">'
       : '<div class="w-full h-32 card-img-fallback flex items-center justify-center text-white/70 text-3xl"><i class="fa-solid fa-building"></i></div>';
     return (
       '<div class="rounded-2xl border border-gray-100 shadow-sm bg-white p-6 flex flex-col items-center text-center">' +
-      imgHtml +
-      '<p class="font-serif font-bold text-gray-900 mt-4 mb-2">' + (item.nombre || "") + "</p>" +
-      (item.testimonio ? '<p class="text-gray-600 text-sm leading-relaxed">' + item.testimonio + "</p>" : "") +
+        imgHtml +
+        '<p class="font-serif font-bold text-gray-900 mt-4 mb-2">' + (item.nombre || "") + "</p>" +
+        (item.testimonio ? '<p class="text-gray-600 text-sm leading-relaxed">' + item.testimonio + "</p>" : "") +
       "</div>"
     );
   }
-  fetch("/data/clientes.json", { cache: "no-store" })
-      .then(function (r) { return r.ok ? r.json() : []; })  
-    .then(function (items) {
-    if (!items.length) return;
-    var el = document.getElementById("clientes-grid");
-    el.innerHTML = items.map(clienteCardHtml).join("");
-    document.getElementById("clientes").hidden = false;
-    document.getElementById("nav-clientes-desktop").hidden = false;
-    document.getElementById("nav-clientes-mobile").hidden = false;
-  })
-  .catch(function () {});
 
-// ---- Eventos y Noticias (cargados desde el CMS) ----
+  fetch("/data/clientes.json", { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : []; })
+    .then(function (items) {
+      if (!items.length) return;
+      var el = document.getElementById("clientes-grid");
+      el.innerHTML = items.map(clienteCardHtml).join("");
+      document.getElementById("clientes").hidden = false;
+      document.getElementById("nav-clientes-desktop").hidden = false;
+      document.getElementById("nav-clientes-mobile").hidden = false;
+    })
+    .catch(function () {});
+
+  // ---- Eventos y Noticias (cargados desde el CMS) ----
   function cardHtml(item, iconClass, idx, clickable) {
     var imgHtml = item.image
-      ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-48 object-cover">'
+      ? '<img src="' + item.image + '" alt="' + (item.title || "").replace(/"/g, "&quot;") + '" class="w-full h-48 object-cover" loading="lazy" decoding="async">'
       : '<div class="w-full h-48 card-img-fallback flex items-center justify-center text-white/70 text-3xl"><i class="' + iconClass + '"></i></div>';
     var full = item.excerpt || "";
-        var esLarga = full.length > 150;
-        var corto = esLarga ? full.slice(0, 150) + "…" : full;
+    var esLarga = full.length > 150;
+    var corto = esLarga ? full.slice(0, 150) + "…" : full;
     var claseClick = clickable ? " cursor-pointer hover:shadow-md transition" : "";
     var idxAttr = clickable ? ' data-idx="' + idx + '"' : "";
     return (
       '<article' + idxAttr + ' class="rounded-2xl overflow-hidden border border-gray-100 shadow-sm bg-white' + claseClick + '">' +
-      imgHtml +
-      '<div class="p-6">' +
-      '<p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">' + formatFecha(item.date) + "</p>" +
-      '<h3 class="font-serif font-bold text-xl text-gray-900 mb-2">' + (item.title || "") + "</h3>" +
-      '<p class="text-gray-600 text-sm leading-relaxed card-desc" data-corto="' + corto.replace(/"/g, "&quot;") + '" data-completo="' + full.replace(/"/g, "&quot;") + '">' + corto + "</p>" +
-      (esLarga ? '<button type="button" class="leer-mas text-trivento-600 text-xs font-semibold mt-2 hover:underline">Leer más</button>' : "") +
-      "</div>" +
+        imgHtml +
+        '<div class="p-6">' +
+          '<p class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2">' + formatFecha(item.date) + "</p>" +
+          '<h3 class="font-serif font-bold text-xl text-gray-900 mb-2">' + (item.title || "") + "</h3>" +
+          '<p class="text-gray-600 text-sm leading-relaxed card-desc" data-corto="' + corto.replace(/"/g, "&quot;") + '" data-completo="' + full.replace(/"/g, "&quot;") + '">' + corto + "</p>" +
+          (esLarga ? '<button type="button" class="leer-mas text-trivento-600 text-xs font-semibold mt-2 hover:underline">Leer más</button>' : "") +
+        "</div>" +
       "</article>"
     );
   }
 
-  function cargar(jsonPath, containerId, iconClass, emptyText) {
+  function cargar(jsonPath, containerId, iconClass, sectionId, navIds) {
     fetch(jsonPath, { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (items) {
         items.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+        if (!items.length) return;
         if (containerId === "eventos-grid") eventosData = items;
+        if (containerId === "noticias-grid") noticiasData = items;
         var el = document.getElementById(containerId);
-        el.innerHTML = items.length
-          ? items.map(function (item, i) { return cardHtml(item, iconClass, i, containerId === "eventos-grid"); }).join("")
-          : emptyStateHtml(emptyText);
+        el.innerHTML = items.map(function (item, i) { return cardHtml(item, iconClass, i, true); }).join("");
+        document.getElementById(sectionId).hidden = false;
+        navIds.forEach(function (id) {
+          var navEl = document.getElementById(id);
+          if (navEl) navEl.hidden = false;
+        });
       })
-      .catch(function () {
-        document.getElementById(containerId).innerHTML = emptyStateHtml(emptyText);
-      });
+      .catch(function () {});
   }
 
-  cargar("/data/eventos.json", "eventos-grid", "fa-solid fa-calendar-days", "Todavía no hay eventos cargados. Se van a mostrar acá apenas se publiquen desde /admin.");
-  cargar("/data/noticias.json", "noticias-grid", "fa-solid fa-newspaper", "Todavía no hay noticias cargadas. Se van a mostrar acá apenas se publiquen desde /admin.");
+  cargar("/data/eventos.json", "eventos-grid", "fa-solid fa-calendar-days", "agenda", ["nav-agenda-desktop", "nav-agenda-mobile"]);
+  cargar("/data/noticias.json", "noticias-grid", "fa-solid fa-newspaper", "noticias", ["nav-noticias-desktop", "nav-noticias-mobile"]);
+
   document.addEventListener("click", function (e) {
-        if (!e.target.classList.contains("leer-mas")) return;
-        var p = e.target.previousElementSibling;
-        if (!p) return;
-        if (e.target.getAttribute("data-abierto") === "1") {
-                p.textContent = p.getAttribute("data-corto");
-                e.target.textContent = "Leer más";
-                e.target.setAttribute("data-abierto", "0");
-        } else {
-                p.textContent = p.getAttribute("data-completo");
-                e.target.textContent = "Leer menos";
-                e.target.setAttribute("data-abierto", "1");
-        }
+    if (!e.target.classList.contains("leer-mas")) return;
+    var p = e.target.previousElementSibling;
+    if (!p) return;
+    if (e.target.getAttribute("data-abierto") === "1") {
+      p.textContent = p.getAttribute("data-corto");
+      e.target.textContent = "Leer más";
+      e.target.setAttribute("data-abierto", "0");
+    } else {
+      p.textContent = p.getAttribute("data-completo");
+      e.target.textContent = "Leer menos";
+      e.target.setAttribute("data-abierto", "1");
+    }
   });
-document.body.insertAdjacentHTML("beforeend",
-                                 '<div id="detalle-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">' +
-                                 '<div id="detalle-backdrop" class="absolute inset-0 bg-black/60"></div>' +
-                                 '<div class="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl">' +
-                                 '<button id="detalle-cerrar" type="button" class="absolute top-3 right-3 z-10 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow hover:bg-gray-100" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>' +
-                                 '<div id="detalle-img-wrap"></div>' +
-                                 '<div class="p-6">' +
-                                 '<p id="detalle-meta" class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2"></p>' +
-                                 '<h3 id="detalle-titulo" class="font-serif font-bold text-2xl text-gray-900 mb-4"></h3>' +
-                                 '<div id="detalle-descripcion" class="text-gray-700 text-sm leading-relaxed"></div>' +
-                                 '</div>' +
-                                 '</div>' +
-                                 '</div>'
-                                 );
-function escapeHtml(s) {
-  return String(s == null ? "" : s)
-  .replace(/&/g, "&amp;")
-  .replace(/</g, "&lt;")
-  .replace(/>/g, "&gt;")
-  .replace(/"/g, "&quot;");
-}
-function simpleMarkdown(text) {
-  var t = escapeHtml(text || "");
-  t = t.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-  t = t.replace(/&lt;(https?:\/\/[^\s&]+?)&gt;/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
-  t = t.replace(/(^|[\s(])(https?:\/\/[^\s<>()]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
-  var parrafos = t.split(/\n\s*\n/).map(function (p) { return "<p>" + p.replace(/\n/g, "<br>") + "</p>"; });
-  return parrafos.join("");
-}
-function abrirDetalle(opts) {
-  var imgWrap = document.getElementById("detalle-img-wrap");
-  if (opts.image) {
-    imgWrap.innerHTML = '<img src="' + opts.image + '" alt="' + escapeHtml(opts.title || "") + '" class="w-full h-64 object-cover">';
-  } else {
-    imgWrap.innerHTML = '<div class="w-full h-32 bg-trivento-50 flex items-center justify-center text-trivento-300 text-3xl"><i class="fa-solid fa-image"></i></div>';
+
+  document.body.insertAdjacentHTML("beforeend",
+    '<div id="detalle-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">' +
+      '<div id="detalle-backdrop" class="absolute inset-0 bg-black/60"></div>' +
+      '<div class="relative bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl">' +
+        '<button id="detalle-cerrar" type="button" class="absolute top-3 right-3 z-10 bg-white rounded-full w-9 h-9 flex items-center justify-center shadow hover:bg-gray-100" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>' +
+        '<div id="detalle-img-wrap"></div>' +
+        '<div class="p-6">' +
+          '<p id="detalle-meta" class="text-trivento-500 text-xs font-semibold uppercase tracking-wide mb-2"></p>' +
+          '<h3 id="detalle-titulo" class="font-serif font-bold text-2xl text-gray-900 mb-4"></h3>' +
+          '<div id="detalle-descripcion" class="text-gray-700 text-sm leading-relaxed"></div>' +
+        "</div>" +
+      "</div>" +
+    "</div>"
+  );
+
+  function escapeHtml(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
-  document.getElementById("detalle-meta").textContent = opts.meta || "";
-  document.getElementById("detalle-titulo").textContent = opts.title || "";
-  document.getElementById("detalle-descripcion").innerHTML = simpleMarkdown(opts.descripcion || "");
-  var modal = document.getElementById("detalle-modal");
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.style.overflow = "hidden";
-}
-function cerrarDetalle() {
-  var modal = document.getElementById("detalle-modal");
-  modal.classList.add("hidden");
-  modal.classList.remove("flex");
-  modal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
-}
-document.getElementById("detalle-cerrar").addEventListener("click", cerrarDetalle);
-document.getElementById("detalle-backdrop").addEventListener("click", cerrarDetalle);
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") cerrarDetalle();
-});
-document.getElementById("proyectos-grid").addEventListener("click", function (e) {
-  var art = e.target.closest("article");
-  if (!art) return;
-  var idx = art.getAttribute("data-idx");
-  if (idx === null) return;
-  var item = proyectosData[Number(idx)];
-  if (!item) return;
-  var meta = [item.ubicacion, item.anio].filter(Boolean).join(" • ");
-  abrirDetalle({ image: item.image, title: item.title, meta: meta, descripcion: item.excerpt });
-});
-document.getElementById("eventos-grid").addEventListener("click", function (e) {
-  if (e.target.classList.contains("leer-mas")) return;
-  var art = e.target.closest("article");
-  if (!art) return;
-  var idx = art.getAttribute("data-idx");
-  if (idx === null) return;
-  var item = eventosData[Number(idx)];
-  if (!item) return;
-  abrirDetalle({ image: item.image, title: item.title, meta: formatFecha(item.date), descripcion: item.body || item.excerpt });
-});
+
+  function simpleMarkdown(text) {
+    var t = escapeHtml(text || "");
+    t = t.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    t = t.replace(/&lt;(https?:\/\/[^\s&]+?)&gt;/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+    t = t.replace(/(^|[\s(])(https?:\/\/[^\s<>()]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+    var parrafos = t.split(/\n\s*\n/).map(function (p) { return "<p>" + p.replace(/\n/g, "<br>") + "</p>"; });
+    return parrafos.join("");
+  }
+
+  function abrirDetalle(opts) {
+    var imgWrap = document.getElementById("detalle-img-wrap");
+    if (opts.image) {
+      imgWrap.innerHTML = '<img src="' + opts.image + '" alt="' + escapeHtml(opts.title || "") + '" class="w-full h-64 object-cover">';
+    } else {
+      imgWrap.innerHTML = '<div class="w-full h-32 bg-trivento-50 flex items-center justify-center text-trivento-300 text-3xl"><i class="fa-solid fa-image"></i></div>';
+    }
+    document.getElementById("detalle-meta").textContent = opts.meta || "";
+    document.getElementById("detalle-titulo").textContent = opts.title || "";
+    document.getElementById("detalle-descripcion").innerHTML = simpleMarkdown(opts.descripcion || "");
+    var modal = document.getElementById("detalle-modal");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function cerrarDetalle() {
+    var modal = document.getElementById("detalle-modal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("detalle-cerrar").addEventListener("click", cerrarDetalle);
+  document.getElementById("detalle-backdrop").addEventListener("click", cerrarDetalle);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") cerrarDetalle();
+  });
+
+  document.getElementById("proyectos-grid").addEventListener("click", function (e) {
+    var art = e.target.closest("article");
+    if (!art) return;
+    var idx = art.getAttribute("data-idx");
+    if (idx === null) return;
+    var item = proyectosData[Number(idx)];
+    if (!item) return;
+    var meta = [item.ubicacion, item.anio].filter(Boolean).join(" • ");
+    abrirDetalle({ image: item.image, title: item.title, meta: meta, descripcion: item.excerpt });
+  });
+
+  document.getElementById("eventos-grid").addEventListener("click", function (e) {
+    if (e.target.classList.contains("leer-mas")) return;
+    var art = e.target.closest("article");
+    if (!art) return;
+    var idx = art.getAttribute("data-idx");
+    if (idx === null) return;
+    var item = eventosData[Number(idx)];
+    if (!item) return;
+    abrirDetalle({ image: item.image, title: item.title, meta: formatFecha(item.date), descripcion: item.body || item.excerpt });
+  });
+
+  document.getElementById("noticias-grid").addEventListener("click", function (e) {
+    if (e.target.classList.contains("leer-mas")) return;
+    var art = e.target.closest("article");
+    if (!art) return;
+    var idx = art.getAttribute("data-idx");
+    if (idx === null) return;
+    var item = noticiasData[Number(idx)];
+    if (!item) return;
+    abrirDetalle({ image: item.image, title: item.title, meta: formatFecha(item.date), descripcion: item.body || item.excerpt });
+  });
 </script>
 
 </body>
